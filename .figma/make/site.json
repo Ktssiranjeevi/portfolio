@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your creative work with a modern, responsive portfolio website designed for UI/UX designers and developers, featuring elegant animations and a user-friendly layout.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
