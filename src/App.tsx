@@ -24,6 +24,9 @@ export default function App() {
   }, [])
 
   const navigate = (page: Page) => {
+    if (page === 'projects') {
+      window.dispatchEvent(new CustomEvent('show-projects-home'))
+    }
     const path = page === 'projects' ? '/projects' : page === 'admin' ? '/admin' : '/'
     if (window.location.pathname !== path) {
       window.history.pushState({}, '', path)

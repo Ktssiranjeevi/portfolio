@@ -1,15 +1,15 @@
-﻿import { useState, useRef, useEffect, type WheelEvent } from 'react'
+import { useState, useRef, useEffect, type WheelEvent } from 'react'
 import type { Page } from '../App'
 const sandsFinalPreview = '/assets/project-previews/Frame 7.png'
 const sandsWireframePreview = '/assets/project-previews/Isometric Website Wireframe Collage.png'
-const websiteCardImage = '/assets/backgrounds/web-app-section-background.png'
-const webAppSectionBackground = '/assets/backgrounds/web-app-section-background.png'
-const mobileAppSectionBackground = '/assets/backgrounds/mobile-app-section-background.png'
-const companyBrandingSectionBackground = '/assets/backgrounds/company-branding-section-background.png'
-const socialMediaSectionBackground = '/assets/backgrounds/social-media-section-background.png'
-const videoSectionBackground = '/assets/backgrounds/video-section-background.png'
-const logoDesignSectionBackground = '/assets/backgrounds/logo-design-section-background.png'
-const expoEventsSectionBackground = '/assets/backgrounds/expo-events-section-background.png'
+const websiteCardImage = '/assets/backgrounds/web-app-section-background.webp'
+const webAppSectionBackground = '/assets/backgrounds/web-app-section-background.webp'
+const mobileAppSectionBackground = '/assets/backgrounds/mobile-app-section-background.webp'
+const companyBrandingSectionBackground = '/assets/backgrounds/company-branding-section-background.webp'
+const socialMediaSectionBackground = '/assets/backgrounds/social-media-section-background.webp'
+const videoSectionBackground = '/assets/backgrounds/video-section-background.webp'
+const logoDesignSectionBackground = '/assets/backgrounds/logo-design-section-background.webp'
+const expoEventsSectionBackground = '/assets/backgrounds/expo-events-section-background.webp'
 import socialMediaAssets from '../data/socialMediaAssets.json'
 import ManagedContent from '../components/ManagedContent'
 import { readProjectCatalog, readProjectCategorySettings, readSocialPostEdits } from '../lib/adminContent'
@@ -38,9 +38,9 @@ const accentForeground = (color: string) => color.toUpperCase() === '#C1FA5A' ? 
 export const allProjects = [
   {
     id: 1, title: "SANDS Corporate Website", category: "Websites",
-    duration: "6 weeks Â· 2023",
+    duration: "6 weeks · 2023",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
-    overview: "A premium e-commerce experience for a luxury fashion brand. The brief called for a layout that felt editorial â€” full-bleed imagery, generous whitespace, and a checkout flow with zero unnecessary steps. Every interaction was designed to feel considered and unhurried.",
+    overview: "A premium e-commerce experience for a luxury fashion brand. The brief called for a layout that felt editorial — full-bleed imagery, generous whitespace, and a checkout flow with zero unnecessary steps. Every interaction was designed to feel considered and unhurried.",
     challenge: "The existing website contained extensive technical and product information, making offerings difficult to understand quickly. Challenges included complex content, hard-to-find information, weak hierarchy, limited separation between products, services, and industries, and the need to build credibility with B2B decision-makers across desktop and mobile.",
     outcome: "The redesign organizes products, solutions, industries, case studies, company information, and resources into a clear B2B information architecture. It simplifies technical content, improves navigation and product presentation, highlights SANDS' experience, and creates clear enquiry and demo paths with responsive layouts and a consistent visual language.",
     process: ["Discovery", "UX Research", "Information Architecture", "Wireframes", "UI Design", "Development Handoff"],
@@ -54,9 +54,9 @@ export const allProjects = [
   },
   {
     id: 2, title: "Precise3DM Digital Manufacturing Website", category: "Websites",
-    duration: "4 weeks Â· 2023",
+    duration: "4 weeks · 2023",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
-    overview: "A full corporate website redesign for a B2B technology company. The goal was to reposition the brand from legacy enterprise software vendor to a modern cloud solutions partner â€” without alienating their existing client base.",
+    overview: "A full corporate website redesign for a B2B technology company. The goal was to reposition the brand from legacy enterprise software vendor to a modern cloud solutions partner — without alienating their existing client base.",
     challenge: "Precise3DM offers many technical services, scanning technologies, and industry-specific solutions. The challenge was to present them without overwhelming visitors unfamiliar with 3D scanning or reverse engineering, clarify the Scan-to-CAD process, establish B2B trust, and strengthen enquiry and quote journeys.",
     outcome: "The information architecture follows how customers evaluate engineering services: Problem, Technology, Service, Application, Process, Result, then Enquiry. Clear service categories, visual workflow explanations, industry content, case studies, responsive layouts, and direct calls to action make it easier to understand and enquire about the right solution.",
     process: ["Discovery", "UX Research", "Information Architecture", "User Flows", "Wireframes", "UI Design", "Development Handoff"],
@@ -69,11 +69,11 @@ export const allProjects = [
   },
   {
     id: 3, title: "Graft3D Healthcare Website", category: "Websites",
-    duration: "5 weeks Â· 2023",
+    duration: "5 weeks · 2023",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
     overview: "A healthcare technology website design project for Graft3D Healthcare Solutions, a company providing medical 3D printing and digital healthcare solutions for hospitals, surgeons, and patients. The project creates a professional, trustworthy digital experience while making DICOM-to-3D conversion, medical image segmentation, Bio-CAD modelling, surgical planning, and patient-specific implants easier to understand.",
     challenge: "Graft3D offers specialized healthcare technologies to users with different levels of technical knowledge. The site needed to explain complex medical information, multiple services and user needs, and the DICOM-to-3D workflow while communicating clinical accuracy and trust.",
-    outcome: "User testing sessions averaged 42 seconds from landing to reservation confirmation â€” beating the 60-second target. App store rating of 4.7 at launch.",
+    outcome: "User testing sessions averaged 42 seconds from landing to reservation confirmation — beating the 60-second target. App store rating of 4.7 at launch.",
     process: ["Discovery", "UX Research", "Information Architecture", "User Flow", "Wireframes", "UI Design", "Development Handoff"],
     image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=700&fit=crop&auto=format",
     screens: [
@@ -140,7 +140,7 @@ export const allProjects = [
   },
   {
     id: 25, title: "UrbanStay Hotel Website", category: "Websites",
-    duration: "4 weeks Â· 2022",
+    duration: "4 weeks · 2022",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
     overview: "A welcoming hotel booking website that pairs destination photography with clear room details, availability, and a simple reservation flow.",
     challenge: "Guests had to move between several pages to compare rooms and understand what was included. The redesign brings room options, amenities, and booking details together so visitors can make a confident choice.",
@@ -155,9 +155,9 @@ export const allProjects = [
   },
   {
     id: 8, title: "SANDS B2B Analytics Dashboard", category: "Web Apps",
-    duration: "12 weeks Â· 2023",
+    duration: "12 weeks · 2023",
     tags: ["Figma", "React", "Tailwind CSS", "Chart.js"],
-    overview: "An enterprise analytics dashboard built for Signals & Systems India â€” real-time data visualisation, CRM integration, role-based access control, and custom report generation for B2B operations teams.",
+    overview: "An enterprise analytics dashboard built for Signals & Systems India — real-time data visualisation, CRM integration, role-based access control, and custom report generation for B2B operations teams.",
     challenge: "The existing reporting system required users to export CSV files and open Excel to analyse data. Power users were spending 3+ hours per week on manual reporting. The redesign had to bring all insights into a single live interface without overwhelming non-technical users.",
     outcome: "Reporting time per user dropped from 3 hours/week to 20 minutes. User satisfaction score increased from 3.1 to 4.6 out of 5.",
     process: ["Discovery", "Data Architecture", "User Flows", "Wireframes", "Design System", "Prototype", "Dev Handoff"],
@@ -170,7 +170,7 @@ export const allProjects = [
   },
   {
     id: 9, title: "HealthTrack Patient Portal", category: "Web Apps",
-    duration: "10 weeks Â· 2023",
+    duration: "10 weeks · 2023",
     tags: ["Figma", "HTML", "CSS", "JavaScript"],
     overview: "A health monitoring SaaS with patient-facing dashboards, appointment scheduling, telemedicine session management, and HIPAA-compliant UX patterns throughout.",
     challenge: "Healthcare UX must balance information density (clinicians need data fast) with clarity (patients are often stressed when using it). Designing for both user types in a single system required a deeply considered role-based architecture.",
@@ -184,9 +184,9 @@ export const allProjects = [
   },
   {
     id: 10, title: "HR Management System", category: "Web Apps",
-    duration: "8 weeks Â· 2022",
+    duration: "8 weeks · 2022",
     tags: ["Figma", "Adobe XD"],
-    overview: "A comprehensive HRMS covering employee onboarding, leave management, performance reviews, payroll integration, and org chart visualisation â€” all in a unified interface that HR teams actually want to use.",
+    overview: "A comprehensive HRMS covering employee onboarding, leave management, performance reviews, payroll integration, and org chart visualisation — all in a unified interface that HR teams actually want to use.",
     challenge: "The client had 6 separate HR tools that didn't talk to each other. Employees filed leave requests in one system, tracked performance in another, and accessed payslips via a third. Consolidation meant mapping 6 separate mental models into one coherent IA.",
     outcome: "Reduced HR admin overhead by 40%. Employee self-service adoption: 89% within 60 days of launch.",
     process: ["System Audit", "IA Design", "User Research", "Design System", "Prototype"],
@@ -198,11 +198,11 @@ export const allProjects = [
   },
   {
     id: 11, title: "CRM Sales Pipeline", category: "Web Apps",
-    duration: "6 weeks Â· 2022",
+    duration: "6 weeks · 2022",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
     overview: "A visual CRM with Kanban-style pipeline management, contact enrichment from LinkedIn, automated follow-up reminders, email threading, and real-time team collaboration.",
     challenge: "Sales reps described their existing CRM as 'a place where deals go to die'. The tool had high data-entry friction, poor mobile experience, and no visibility into team activity. The redesign prioritised speed of input and at-a-glance pipeline health.",
-    outcome: "Daily active usage increased 3Ã— post-launch. Average deal cycle shortened by 18% in the first quarter.",
+    outcome: "Daily active usage increased 3× post-launch. Average deal cycle shortened by 18% in the first quarter.",
     process: ["Research", "User Interviews", "User Flows", "UI Design", "Dev Handoff"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=700&fit=crop&auto=format",
     screens: [
@@ -212,10 +212,10 @@ export const allProjects = [
   },
   {
     id: 12, title: "Inventory Management Portal", category: "Web Apps",
-    duration: "5 weeks Â· 2022",
+    duration: "5 weeks · 2022",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
     overview: "A warehouse inventory system with barcode scanning integration, real-time low-stock alerts, vendor management, purchase order workflows, and auto-reorder logic.",
-    challenge: "Stock discrepancies were costing the client â‚¹4L/month. Manual counts were error-prone and slow. The new system needed to integrate with existing barcode hardware while making stock-takes fast enough that staff would actually do them.",
+    challenge: "Stock discrepancies were costing the client ₹4L/month. Manual counts were error-prone and slow. The new system needed to integrate with existing barcode hardware while making stock-takes fast enough that staff would actually do them.",
     outcome: "Stock discrepancy rate dropped 94%. Monthly losses from errors reduced to near zero within 90 days.",
     process: ["Discovery", "Hardware Audit", "Wireframes", "UI Design", "Dev"],
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=700&fit=crop&auto=format",
@@ -224,10 +224,10 @@ export const allProjects = [
   },
   {
     id: 13, title: "Mobile Banking App", category: "Mobile Apps",
-    duration: "8 weeks Â· 2023",
+    duration: "8 weeks · 2023",
     tags: ["Figma", "Adobe XD", "Principle"],
     overview: "An intuitive mobile banking experience with biometric authentication, smart transaction categorisation, budgeting insights, savings goal tracking, and a design optimised for both iOS and Android.",
-    challenge: "Research revealed users checked their balance an average of 6Ã— per day â€” mostly on the go, under 30 seconds per session. The app needed to surface the most critical information in the fewest possible taps.",
+    challenge: "Research revealed users checked their balance an average of 6× per day — mostly on the go, under 30 seconds per session. The app needed to surface the most critical information in the fewest possible taps.",
     outcome: "Task completion rate of 96% in usability testing. Time to complete a bank transfer reduced from 2 minutes (competitor benchmark) to 34 seconds.",
     process: ["Research", "Competitive Analysis", "User Flows", "Wireframes", "UI Design", "Prototype", "Handoff"],
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=700&fit=crop&auto=format",
@@ -238,11 +238,11 @@ export const allProjects = [
   },
   {
     id: 14, title: "FitLife Fitness Tracker", category: "Mobile Apps",
-    duration: "6 weeks Â· 2022",
+    duration: "6 weeks · 2022",
     tags: ["Figma", "ProtoPie"],
     overview: "A gamified fitness app with workout logging, interactive progress charts, friend challenges, AI-suggested training plans, and wearable device sync for Apple Watch and Wear OS.",
-    challenge: "Most fitness apps lose 80% of users within the first week. The design had to build a habit loop â€” reward, progress visibility, and social accountability â€” before users could fall off.",
-    outcome: "D7 retention rate of 54% â€” more than double the category average of 25%.",
+    challenge: "Most fitness apps lose 80% of users within the first week. The design had to build a habit loop — reward, progress visibility, and social accountability — before users could fall off.",
+    outcome: "D7 retention rate of 54% — more than double the category average of 25%.",
     process: ["Research", "Habit Design", "User Flows", "UI Design", "Micro-interactions", "Prototype"],
     image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&h=700&fit=crop&auto=format",
     screens: [],
@@ -250,7 +250,7 @@ export const allProjects = [
   },
   {
     id: 15, title: "FoodDelight Delivery App", category: "Mobile Apps",
-    duration: "5 weeks Â· 2022",
+    duration: "5 weeks · 2022",
     tags: ["Figma", "Adobe XD"],
     overview: "A food delivery experience with real-time GPS order tracking, smart restaurant recommendations based on order history, dietary preference filters, and a checkout under 3 taps.",
     challenge: "The client's delivery partner had a 4.2-star app competing against 4.8-star incumbents. User reviews cited confusing navigation and a slow, multi-step checkout as primary complaints.",
@@ -262,9 +262,9 @@ export const allProjects = [
   },
   {
     id: 16, title: "EventSync Manager App", category: "Mobile Apps",
-    duration: "4 weeks Â· 2022",
+    duration: "4 weeks · 2022",
     tags: ["Figma", "Principle"],
-    overview: "An all-in-one event management app for attendees and organisers â€” ticketing, QR check-in, live schedule with session reminders, speaker bios, networking profiles, and a Q&A system.",
+    overview: "An all-in-one event management app for attendees and organisers — ticketing, QR check-in, live schedule with session reminders, speaker bios, networking profiles, and a Q&A system.",
     challenge: "Event apps are typically built for a single event and discarded. The challenge was designing a product generic enough to work across event types while feeling bespoke to each one through theming.",
     outcome: "Deployed at 12 events in the first 6 months. Average attendee app usage: 4.1 sessions per event day.",
     process: ["Discovery", "User Personas", "Wireframes", "UI Design", "Prototype"],
@@ -274,11 +274,11 @@ export const allProjects = [
   },
   {
     id: 17, title: "Social Media Campaign", category: "Graphic Design",
-    duration: "Ongoing Â· 2022â€“2023",
+    duration: "Ongoing · 2022–2023",
     tags: ["Photoshop", "Illustrator", "After Effects", "Canva"],
-    overview: "100+ social media creatives for a lifestyle brand across Instagram, LinkedIn, and Twitter â€” consistent visual language, seasonal campaigns, product launches, and motion graphic variants for Reels and Stories.",
+    overview: "100+ social media creatives for a lifestyle brand across Instagram, LinkedIn, and Twitter — consistent visual language, seasonal campaigns, product launches, and motion graphic variants for Reels and Stories.",
     challenge: "The brand had no visual guidelines. Every post looked different. The brief was to create a design system for social content that any team member could execute consistently.",
-    outcome: "Follower growth of 340% over 8 months. Average post engagement rate of 6.2% â€” 4Ã— above the lifestyle brand average.",
+    outcome: "Follower growth of 340% over 8 months. Average post engagement rate of 6.2% — 4× above the lifestyle brand average.",
     process: ["Brand Discovery", "Style Guide", "Template Design", "Content Calendar", "Production"],
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&h=700&fit=crop&auto=format",
     screens: [],
@@ -286,11 +286,11 @@ export const allProjects = [
   },
   {
     id: 18, title: "Corporate Brochure Series", category: "Graphic Design",
-    duration: "3 weeks Â· 2022",
+    duration: "3 weeks · 2022",
     tags: ["Illustrator", "InDesign", "Photoshop"],
-    overview: "15 corporate brochures across multiple product lines â€” tri-fold, bi-fold, and multi-page formats â€” print-ready with CMYK profiles, bleed marks, and spot colour specifications.",
+    overview: "15 corporate brochures across multiple product lines — tri-fold, bi-fold, and multi-page formats — print-ready with CMYK profiles, bleed marks, and spot colour specifications.",
     challenge: "All 15 documents needed to feel like a cohesive family while each one clearly distinguished its product line. A modular grid system was designed first so all layouts shared the same structural DNA.",
-    outcome: "Print batch delivered on time across 3 international markets. Zero reprints required â€” first time the client had achieved this.",
+    outcome: "Print batch delivered on time across 3 international markets. Zero reprints required — first time the client had achieved this.",
     process: ["Brief", "Grid System", "Typography", "Layout", "Pre-press"],
     image: "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=1200&h=700&fit=crop&auto=format",
     screens: [],
@@ -298,10 +298,10 @@ export const allProjects = [
   },
   {
     id: 19, title: "NovaBrand Identity System", category: "Branding",
-    duration: "5 weeks Â· 2023",
+    duration: "5 weeks · 2023",
     tags: ["Illustrator", "Photoshop", "InDesign"],
-    overview: "Complete visual identity for a B2B tech startup â€” logomark, wordmark, colour system, type hierarchy, brand voice guidelines, business cards, email signatures, presentation templates, and a 48-page brand book.",
-    challenge: "The founders wanted to appear established and credible to enterprise clients while being genuinely approachable to SMB clients. These are usually opposing positioning stances â€” the identity had to live in the tension between them.",
+    overview: "Complete visual identity for a B2B tech startup — logomark, wordmark, colour system, type hierarchy, brand voice guidelines, business cards, email signatures, presentation templates, and a 48-page brand book.",
+    challenge: "The founders wanted to appear established and credible to enterprise clients while being genuinely approachable to SMB clients. These are usually opposing positioning stances — the identity had to live in the tension between them.",
     outcome: "Brand launched at a major industry conference. 3 enterprise pilot enquiries received within the first week of launch.",
     process: ["Discovery", "Competitive Positioning", "Concept Development", "Identity Design", "Brand Book"],
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=700&fit=crop&auto=format",
@@ -311,11 +311,11 @@ export const allProjects = [
     accent: "#FFB347",
   },
   {
-    id: 20, title: "Artisan CafÃ© Rebrand", category: "Branding",
-    duration: "4 weeks Â· 2022",
+    id: 20, title: "Artisan Café Rebrand", category: "Branding",
+    duration: "4 weeks · 2022",
     tags: ["Illustrator", "Photoshop"],
-    overview: "Full rebrand for a 3-location artisan cafÃ© chain â€” new logo system, cup and packaging design, menu redesign, signage specs, takeaway bag design, and a social media template kit.",
-    challenge: "The original brand looked indistinguishable from any independent cafÃ©. The redesign needed to build a recognisable identity that could scale to 15 locations without losing its handcrafted character.",
+    overview: "Full rebrand for a 3-location artisan café chain — new logo system, cup and packaging design, menu redesign, signage specs, takeaway bag design, and a social media template kit.",
+    challenge: "The original brand looked indistinguishable from any independent café. The redesign needed to build a recognisable identity that could scale to 15 locations without losing its handcrafted character.",
     outcome: "Brand recognition in customer surveys increased from 23% to 71% within 6 months. Franchise enquiries received for the first time in the company's 7-year history.",
     process: ["Brand Audit", "Concept", "Identity Design", "Packaging", "Signage", "Rollout"],
     image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=700&fit=crop&auto=format",
@@ -324,9 +324,9 @@ export const allProjects = [
   },
   {
     id: 21, title: "Product Launch Video", category: "Videos",
-    duration: "2 weeks Â· 2023",
+    duration: "2 weeks · 2023",
     tags: ["Premiere Pro", "After Effects", "Photoshop"],
-    overview: "A 90-second product launch video with kinetic typography, brand animations, custom motion graphics, colour-graded footage, and a professional sound design pass â€” delivered in 4K for web and broadcast.",
+    overview: "A 90-second product launch video with kinetic typography, brand animations, custom motion graphics, colour-graded footage, and a professional sound design pass — delivered in 4K for web and broadcast.",
     challenge: "The client had a 2-week window between product photography delivery and the public launch event. Full post-production in 14 days with 3 rounds of revisions built in.",
     outcome: "Delivered on day 13. Video reached 120K organic views on LinkedIn in the first 48 hours.",
     process: ["Script", "Storyboard", "Motion Design", "Edit", "Sound Design", "Colour Grade"],
@@ -336,9 +336,9 @@ export const allProjects = [
   },
   {
     id: 22, title: "Corporate Brand Film", category: "Videos",
-    duration: "3 weeks Â· 2022",
+    duration: "3 weeks · 2022",
     tags: ["Premiere Pro", "After Effects"],
-    overview: "A 4-minute corporate identity film â€” company story, team highlights, product showcase, client testimonials, and custom motion graphics throughout. Delivered in multiple aspect ratios for web, LinkedIn, and conference display.",
+    overview: "A 4-minute corporate identity film — company story, team highlights, product showcase, client testimonials, and custom motion graphics throughout. Delivered in multiple aspect ratios for web, LinkedIn, and conference display.",
     challenge: "Filming was completed before the design brief was finalised, leaving a mix of footage that didn't tell a coherent story. The edit had to construct a narrative from existing assets alone.",
     outcome: "Used as the hero video at the client's annual conference (1,200 attendees) and embedded on their homepage. Website conversions increased 28% in the following month.",
     process: ["Concept", "Rough Cut", "Motion Graphics", "Fine Cut", "Sound Mix", "Delivery"],
@@ -348,11 +348,11 @@ export const allProjects = [
   },
   {
     id: 23, title: "Nebula UI Design System", category: "UI/UX",
-    duration: "10 weeks Â· 2023",
+    duration: "10 weeks · 2023",
     tags: ["Figma", "Storybook", "React"],
     overview: "A comprehensive design system with 80+ components, a full token set (colour, spacing, typography, elevation, motion), accessibility documentation, interactive Storybook, and a Figma plugin for token management.",
-    challenge: "The team had 4 designers and 12 developers producing inconsistent UIs across 3 products. Components were being rebuilt from scratch every sprint. A system was needed that would genuinely be adopted â€” not just documented.",
-    outcome: "Component reuse rate reached 92% within 2 sprints of rollout. Designerâ€“developer handoff time reduced by 65%.",
+    challenge: "The team had 4 designers and 12 developers producing inconsistent UIs across 3 products. Components were being rebuilt from scratch every sprint. A system was needed that would genuinely be adopted — not just documented.",
+    outcome: "Component reuse rate reached 92% within 2 sprints of rollout. Designer–developer handoff time reduced by 65%.",
     process: ["Audit", "Token Architecture", "Component Design", "Documentation", "Storybook", "Adoption Training"],
     image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200&h=700&fit=crop&auto=format",
     screens: [
@@ -362,10 +362,10 @@ export const allProjects = [
   },
   {
     id: 24, title: "B2B Onboarding UX Research", category: "UI/UX",
-    duration: "4 weeks Â· 2022",
+    duration: "4 weeks · 2022",
     tags: ["Figma", "Maze", "Hotjar"],
-    overview: "An end-to-end UX research study on B2B SaaS onboarding â€” 18 user interviews, moderated usability testing with 12 participants, heatmap analysis across 3 months of Hotjar data, and a redesigned onboarding flow.",
-    challenge: "The client's SaaS product had a 67% drop-off during the 7-day free trial. The research had to identify whether this was a product, onboarding, or market fit problem â€” and then solve it.",
+    overview: "An end-to-end UX research study on B2B SaaS onboarding — 18 user interviews, moderated usability testing with 12 participants, heatmap analysis across 3 months of Hotjar data, and a redesigned onboarding flow.",
+    challenge: "The client's SaaS product had a 67% drop-off during the 7-day free trial. The research had to identify whether this was a product, onboarding, or market fit problem — and then solve it.",
     outcome: "Research identified 4 critical drop-off points. Redesigned onboarding reduced trial-to-paid conversion drop-off by 38%. Monthly recurring revenue increased 19% in the quarter following implementation.",
     process: ["Research Plan", "User Interviews", "Usability Testing", "Data Analysis", "Redesign", "A/B Test"],
     image: "https://images.unsplash.com/photo-1576153192396-180ecef2a715?w=1200&h=700&fit=crop&auto=format",
@@ -373,6 +373,8 @@ export const allProjects = [
     accent: "#FF6B6B",
   },
 ]
+
+type PortfolioProject = (typeof allProjects)[number] & { mobileImage?: string }
 
 const youtubeVideos = [
   'Enu4OxtDxcs', '1N4OKhXZcow', 'Mad0X8piP3k', 'faDQNgisFCg',
@@ -384,7 +386,7 @@ const youtubeVideos = [
 // ===== MAIN COMPONENT =====
 
 function LegacyProjectsPage({ onNavigate }: ProjectsPageProps) {
-  const projectCatalog = readProjectCatalog(allProjects)
+  const projectCatalog = readProjectCatalog<PortfolioProject>(allProjects)
   const [activeCategory, setActiveCategory] = useState("All")
   const [selectedId, setSelectedId] = useState(projectCatalog[0].id)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -419,7 +421,7 @@ function LegacyProjectsPage({ onNavigate }: ProjectsPageProps) {
       className="flex flex-col"
       style={{ height: '100vh', paddingTop: '64px', backgroundColor: '#1B1C1E', overflow: 'hidden' }}
     >
-      {/* â”€â”€ MOBILE: dropdown trigger bar â”€â”€ */}
+      {/* ── MOBILE: dropdown trigger bar ── */}
       <div
         className="md:hidden shrink-0 flex items-center gap-3 px-4 py-3"
         style={{ background: 'white', borderBottom: '1px solid rgba(193,250,90,0.1)' }}
@@ -455,7 +457,7 @@ function LegacyProjectsPage({ onNavigate }: ProjectsPageProps) {
         </button>
       </div>
 
-      {/* â”€â”€ MOBILE: dropdown panel â”€â”€ */}
+      {/* ── MOBILE: dropdown panel ── */}
       <div
         className="md:hidden shrink-0 overflow-y-auto no-scrollbar"
         style={{
@@ -550,10 +552,10 @@ function LegacyProjectsPage({ onNavigate }: ProjectsPageProps) {
         })}
       </div>
 
-      {/* â”€â”€ DESKTOP: 30/70 split â”€â”€ */}
+      {/* ── DESKTOP: 30/70 split ── */}
       <div className="flex flex-1 min-h-0">
 
-        {/* â•â• LEFT SIDEBAR (desktop only, 30%) â•â• */}
+        {/* ══ LEFT SIDEBAR (desktop only, 30%) ══ */}
         <aside
           className="hidden md:flex shrink-0 flex-col"
           style={{
@@ -564,7 +566,7 @@ function LegacyProjectsPage({ onNavigate }: ProjectsPageProps) {
             background: 'white',
           }}
         >
-          {/* â”€â”€ Category filter section â”€â”€ */}
+          {/* ── Category filter section ── */}
           <div
             className="shrink-0 px-4 pt-4 pb-3"
             style={{ borderBottom: '1px solid rgba(193,250,90,0.1)' }}
@@ -614,11 +616,11 @@ function LegacyProjectsPage({ onNavigate }: ProjectsPageProps) {
             </div>
           </div>
 
-          {/* â”€â”€ Project list â”€â”€ */}
+          {/* ── Project list ── */}
           <div className="flex-1 overflow-y-auto no-scrollbar">
             {filtered.length === 0 && (
               <div className="flex flex-col items-center justify-center py-12 px-4 text-center">
-                <span className="text-3xl mb-3">ðŸ”</span>
+                <span className="text-3xl mb-3">🔍</span>
                 <p className="text-sm font-semibold" style={{ color: '#1A1A2E', fontFamily: "'Outfit', sans-serif" }}>
                   No projects here yet
                 </p>
@@ -674,7 +676,7 @@ function LegacyProjectsPage({ onNavigate }: ProjectsPageProps) {
           </div>
         </aside>
 
-        {/* â•â• RIGHT DETAIL PANEL â•â• */}
+        {/* ══ RIGHT DETAIL PANEL ══ */}
         <div
           ref={detailRef}
           className="flex-1 overflow-y-auto no-scrollbar"
@@ -694,7 +696,7 @@ function ProjectDetail({
   project,
   onNavigate,
 }: {
-  project: typeof allProjects[0]
+  project: PortfolioProject
   onNavigate: (p: Page) => void
 }) {
   const catColor = categoryColors[project.category] ?? '#C1FA5A'
@@ -712,16 +714,12 @@ function ProjectDetail({
       className="transition-opacity duration-300"
       style={{ opacity: mounted ? 1 : 0, minHeight: '100%' }}
     >
-      {/* â”€â”€ Hero image â”€â”€ */}
+      {/* ── Hero image ── */}
       <div
         className="relative w-full overflow-hidden"
         style={{ height: '280px', background: '#E8E8E8' }}
       >
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
+        <picture><source media="(max-width: 767px)" srcSet={project.mobileImage || project.image} /><img src={project.image} alt={project.title} className="w-full h-full object-cover" /></picture>
         {/* Gradient overlay */}
         <div
           className="absolute inset-0"
@@ -745,10 +743,10 @@ function ProjectDetail({
         </div>
       </div>
 
-      {/* â”€â”€ Content â”€â”€ */}
+      {/* ── Content ── */}
       <div className="px-6 md:px-8 py-7 space-y-8">
 
-        {/* â”€â”€ Meta row: duration + tags â”€â”€ */}
+        {/* ── Meta row: duration + tags ── */}
         <div className="flex flex-wrap items-center gap-4">
           <div
             className="flex items-center gap-2 px-3.5 py-2 rounded-xl"
@@ -782,15 +780,15 @@ function ProjectDetail({
           </div>
         </div>
 
-        {/* â”€â”€ Overview â”€â”€ */}
-        <Section label="Overview" icon="ðŸ“‹" color={catColor}>
+        {/* ── Overview ── */}
+        <Section label="Overview" icon="📋" color={catColor}>
           <p className="text-sm leading-relaxed" style={{ color: '#4B5563', fontFamily: "'Inter', sans-serif" }}>
             {project.overview}
           </p>
         </Section>
 
-        {/* â”€â”€ Design Process â”€â”€ */}
-        <Section label="Design Process" icon="ðŸ”„" color={catColor}>
+        {/* ── Design Process ── */}
+        <Section label="Design Process" icon="🔄" color={catColor}>
           <div className="flex flex-wrap gap-2 items-center">
             {project.process.map((step, i) => (
               <div key={step} className="flex items-center gap-2">
@@ -821,8 +819,8 @@ function ProjectDetail({
           </div>
         </Section>
 
-        {/* â”€â”€ Design Showcase â”€â”€ */}
-        <Section label="Design Showcase" icon="ðŸ–¼ï¸" color={catColor}>
+        {/* ── Design Showcase ── */}
+        <Section label="Design Showcase" icon="🖼️" color={catColor}>
           {project.screens.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Main image */}
@@ -830,11 +828,7 @@ function ProjectDetail({
                 className="overflow-hidden rounded-2xl col-span-full sm:col-span-1"
                 style={{ background: '#E8E8E8', aspectRatio: '16/9' }}
               >
-                <img
-                  src={project.image}
-                  alt={`${project.title} â€” main screen`}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
+                <picture><source media="(max-width: 767px)" srcSet={project.mobileImage || project.image} /><img src={project.image} alt={`${project.title} — main screen`} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" /></picture>
               </div>
               {project.screens.map((src, i) => (
                 <div
@@ -844,7 +838,7 @@ function ProjectDetail({
                 >
                   <img
                     src={src}
-                    alt={`${project.title} â€” screen ${i + 1}`}
+                    alt={`${project.title} — screen ${i + 1}`}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
@@ -856,36 +850,32 @@ function ProjectDetail({
                 className="overflow-hidden rounded-2xl col-span-full"
                 style={{ background: '#E8E8E8', aspectRatio: '21/9' }}
               >
-                <img
-                  src={project.image}
-                  alt={`${project.title} â€” main screen`}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
+                <picture><source media="(max-width: 767px)" srcSet={project.mobileImage || project.image} /><img src={project.image} alt={`${project.title} — main screen`} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" /></picture>
               </div>
             </div>
           )}
         </Section>
 
-        {/* â”€â”€ Case Study â”€â”€ */}
-        <Section label="Case Study" icon="ðŸ“–" color={catColor}>
+        {/* ── Case Study ── */}
+        <Section label="Case Study" icon="📖" color={catColor}>
           <div className="space-y-5">
             <CaseBlock
               title="The Challenge"
               color={catColor}
-              icon="âš¡"
+              icon="⚡"
               body={project.challenge}
             />
             <CaseBlock
               title="Outcome"
               color={catColor}
-              icon="ðŸŽ¯"
+              icon="🎯"
               body={project.outcome}
               highlight
             />
           </div>
         </Section>
 
-        {/* â”€â”€ Footer CTA â”€â”€ */}
+        {/* ── Footer CTA ── */}
         <div
           className="flex items-center justify-between py-6 px-6 rounded-2xl mt-2"
           style={{ background: `${catColor}0E`, border: `1px solid ${catColor}25` }}
@@ -909,7 +899,7 @@ function ProjectDetail({
             className="px-5 py-2.5 rounded-full text-xs font-bold shrink-0"
             style={{ background: catColor, color: accentForeground(catColor), fontFamily: "'Outfit', sans-serif", boxShadow: `0 4px 14px ${catColor}50` }}
           >
-            Hire Me â†’
+            Hire Me →
           </button>
         </div>
 
@@ -1107,17 +1097,30 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(null)
   const [activeYoutubeIndex, setActiveYoutubeIndex] = useState(0)
-  const projectCatalog = readProjectCatalog(allProjects)
+  const [activeVideoFilter, setActiveVideoFilter] = useState<'All' | 'Product video' | 'Events'>('All')
+  const [socialPostFilter, setSocialPostFilter] = useState<'All' | 'Product Poster' | 'Event Poster' | 'Special Day Poster'>('All')
+  const projectCatalog = readProjectCatalog<PortfolioProject>(allProjects)
   const categorySettings = readProjectCategorySettings()
   const railRef = useRef<HTMLDivElement>(null)
+  const dragState = useRef({ pointerId: -1, startX: 0, startScrollLeft: 0, moved: false })
+  const suppressClick = useRef(false)
   const audioContextRef = useRef<AudioContext | null>(null)
   const lastSoundIndexRef = useRef(0)
   const projects = projectsForTab(activeTab, projectCatalog)
   const centeredProject = projects[Math.min(activeIndex, Math.max(0, projects.length - 1))]
-  const centeredCardImage = centeredProject ? projectCardImage(centeredProject, categorySettings) : '/assets/backgrounds/project-page-background.png'
+  const centeredCardImage = centeredProject ? projectCardImage(centeredProject, categorySettings) : '/assets/backgrounds/project-page-background.webp'
   const selectedProject = projectCatalog.find((project) => project.id === selectedProjectId)
   const detailProject = selectedProject as ((typeof allProjects)[number] & { figmaUrl?: string; figmaEnabled?: boolean }) | undefined
   const currentTab = portfolioTabs.find((tab) => tab.id === activeTab)!
+
+  useEffect(() => {
+    const showProjectsHome = () => {
+      setSelectedProjectId(null)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    window.addEventListener('show-projects-home', showProjectsHome)
+    return () => window.removeEventListener('show-projects-home', showProjectsHome)
+  }, [])
 
   useEffect(() => {
     setActiveIndex(0)
@@ -1173,12 +1176,15 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
   }
 
   if (selectedProject && selectedProject.category === 'Videos') {
-    const activeYoutubeId = youtubeVideos[activeYoutubeIndex]
+    // The supplied playlist is grouped as product videos followed by event videos.
+    const visibleVideoIndices = youtubeVideos.map((_, index) => index).filter((index) => activeVideoFilter === 'All' || (activeVideoFilter === 'Product video' ? index < Math.ceil(youtubeVideos.length / 2) : index >= Math.ceil(youtubeVideos.length / 2)))
+    const activeIndex = visibleVideoIndices.includes(activeYoutubeIndex) ? activeYoutubeIndex : visibleVideoIndices[0] ?? 0
+    const activeYoutubeId = youtubeVideos[activeIndex]
     return (
-      <main className="project-detail-page min-h-screen bg-[#1B1C1E] pt-16 text-[#F5F5F5]">
-        <div className="mx-auto grid max-w-[1440px] gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1fr)_390px] lg:px-8">
-          <section className="min-w-0">
-            <div className="aspect-video overflow-hidden rounded-2xl bg-[#1A1A2E] shadow-lg">
+      <main className="project-detail-page min-h-screen bg-[#1B1C1E] pt-16 text-[#F5F5F5] lg:h-[calc(100vh-4rem)] lg:min-h-0 lg:overflow-hidden">
+        <div className="mx-auto grid max-w-[1440px] gap-6 px-4 py-6 lg:h-full lg:grid-cols-[minmax(0,1fr)_390px] lg:px-8">
+          <section className="video-playlist-scroll min-w-0 lg:h-full lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain">
+            <div className="aspect-video overflow-hidden rounded-2xl bg-[#1A1A2E] shadow-lg lg:sticky lg:top-0 lg:z-10">
               <iframe
                 key={activeYoutubeId}
                 src={`https://www.youtube-nocookie.com/embed/${activeYoutubeId}?rel=0`}
@@ -1190,44 +1196,41 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               />
             </div>
 
-            <h1 className="mt-4 text-xl font-bold sm:text-2xl">SANDS video {String(activeYoutubeIndex + 1).padStart(2, '0')}</h1>
+            <h1 className="mt-4 text-xl font-bold sm:text-2xl">SANDS video {String(activeIndex + 1).padStart(2, '0')}</h1>
             <div className="mt-3 flex flex-wrap items-center justify-between gap-4 border-b border-[#E8E8E8] pb-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C1FA5A] font-bold text-[#1B1C1E]">KD</div>
-                <div><p className="font-semibold">Kiran Dev</p><p className="text-xs text-[#7A7D8E]">Design portfolio</p></div>
-                <span className="ml-2 rounded-full bg-[#EFF8D9] px-4 py-2 text-sm font-semibold text-[#557A12]">Project video</span>
+                <img src="/assets/Logos/Mylogo.png" alt="Siranjeevi portfolio logo" className="h-10 w-10 rounded-full bg-white object-contain p-1" />
+                <div><p className="font-semibold">Siranjeevi</p><p className="text-xs text-[#7A7D8E]">Design portfolio</p></div>
+                <p className="max-w-md text-xs leading-5 text-white/70">Explore product showcases and event highlights from the SANDS portfolio.</p>
               </div>
               <div className="flex flex-wrap gap-2 text-sm">
-                <a href={`https://youtu.be/${activeYoutubeId}`} target="_blank" rel="noreferrer" className="rounded-full bg-white px-4 py-2 text-[#557A12] shadow-sm hover:bg-[#EFF8D9]">Open on YouTube â†—</a>
-                <button onClick={closeProject} className="rounded-full bg-white px-4 py-2 text-[#557A12] shadow-sm hover:bg-[#EFF8D9]">â† All projects</button>
+                <a href={`https://youtu.be/${activeYoutubeId}`} target="_blank" rel="noreferrer" className="rounded-full bg-white px-4 py-2 text-[#557A12] shadow-sm hover:bg-[#EFF8D9]">Open on YouTube ↗</a>
+                <button onClick={closeProject} className="rounded-full bg-white px-4 py-2 text-[#557A12] shadow-sm hover:bg-[#EFF8D9]">← All projects</button>
               </div>
             </div>
 
-            <p className="mt-4 flex items-center gap-2 rounded-2xl border border-[#E8E8E8] bg-white p-4 text-sm text-[#55546A] shadow-sm">Video {activeYoutubeIndex + 1} of {youtubeVideos.length} Â· <img src="/assets/Logos/Sands%20E.png" alt="SANDS" className="inline-block h-5 w-5 rounded object-cover" /> video showcase</p>
-            <article className="mt-4 overflow-hidden rounded-2xl border border-[#E8E8E8] bg-white shadow-sm">
-              {selectedProject.image && <img src={selectedProject.image} alt={`${selectedProject.title} project`} className="max-h-72 w-full bg-[#F4F2F7] object-contain" />}
-              <div className="p-4"><p className="text-xs text-[#7A7D8E]">{selectedProject.duration}</p><h2 className="mt-1 font-bold">{selectedProject.title}</h2><p className="mt-2 text-sm leading-6 text-[#55546A]">{selectedProject.overview}</p></div>
-            </article>
+            <div className="mt-4 rounded-2xl border border-white/10 p-4"><h2 className="font-semibold">About this video collection</h2><p className="mt-2 text-sm leading-6 text-white/70">{selectedProject.overview}</p></div>
             <ManagedContent page="videos" />
           </section>
 
-          <aside>
-            <div className="mb-3 flex gap-2">
-              <span className="rounded-lg bg-[#C1FA5A] px-3 py-2 text-sm font-semibold text-[#1B1C1E]">Up next</span>
-              <span className="rounded-lg bg-white px-3 py-2 text-sm text-[#55546A]">{youtubeVideos.length} videos</span>
+          <aside className="video-playlist-scroll min-w-0 overflow-x-hidden lg:h-full lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain">
+            <div className="sticky top-16 z-20 mb-3 flex gap-2 overflow-x-auto bg-[#1B1C1E] py-2 lg:top-0">
+              {(['All', 'Product video', 'Events'] as const).map((filter) => <button key={filter} onClick={() => { setActiveVideoFilter(filter); const firstIndex = filter === 'Product video' ? 0 : filter === 'Events' ? Math.ceil(youtubeVideos.length / 2) : activeYoutubeIndex; setActiveYoutubeIndex(firstIndex) }} className={`shrink-0 rounded-full border px-4 py-2 text-xs font-semibold transition ${activeVideoFilter === filter ? 'border-[#C1FA5A] bg-[#C1FA5A] text-[#1B1C1E]' : 'border-white/20 text-white hover:border-[#C1FA5A]'}`}>{filter}</button>)}
             </div>
             <div className="space-y-3">
-              {youtubeVideos.map((videoId, index) => (
+              {visibleVideoIndices.map((index) => {
+                const videoId = youtubeVideos[index]
+                return (
                 <button key={videoId} onClick={() => setActiveYoutubeIndex(index)} className={`flex w-full gap-3 rounded-xl p-2 text-left transition hover:bg-white ${index === activeYoutubeIndex ? 'bg-white shadow-sm' : ''}`}>
                   <div className="relative aspect-video w-40 shrink-0 overflow-hidden rounded-lg bg-[#E8E8E8]">
                     <img src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`} alt="" loading="lazy" className="h-full w-full object-cover" />
                     <span className="absolute bottom-1 right-1 rounded bg-[#1A1A2E]/85 px-1.5 py-0.5 text-[10px] text-white">{String(index + 1).padStart(2, '0')}</span>
                   </div>
-                  <span className="min-w-0"><strong className="line-clamp-2 text-sm">SANDS video {String(index + 1).padStart(2, '0')}</strong><span className="mt-1 block text-xs text-[#7A7D8E]">YouTube Â· SANDS showcase</span></span>
+                  <span className="min-w-0"><strong className="line-clamp-2 text-sm">SANDS video {String(index + 1).padStart(2, '0')}</strong><span className="mt-1 block text-xs text-[#7A7D8E]">YouTube · SANDS showcase</span></span>
                 </button>
-              ))}
+                )
+              })}
             </div>
-            <button onClick={closeProject} className="mt-5 w-full rounded-full border border-[#D8D2E8] bg-white px-4 py-2.5 text-sm font-semibold text-[#557A12] hover:bg-[#EFF8D9]">Back to all projects</button>
           </aside>
         </div>
       </main>
@@ -1236,47 +1239,37 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
 
   const socialPostEdits = readSocialPostEdits()
   if (selectedProject && (selectedProject.id === 17 || selectedProject.category === 'Social Media Posts' || selectedProject.category === 'Social Media')) {
+    const visibleSocialAssets = socialPostFilter === 'All'
+      ? socialMediaAssets
+      : socialMediaAssets.filter((asset) => socialPostEdits.find((edit) => edit.assetName === asset.name)?.category === socialPostFilter)
     return (
-      <main className="project-detail-page min-h-screen bg-[#1B1C1E] pt-16 text-[#F5F5F5]">
-        <div className="mx-auto grid max-w-6xl gap-5 px-4 py-6 md:grid-cols-[220px_minmax(0,1fr)_260px] md:px-6">
+      <main className="project-detail-page min-h-screen bg-[#1B1C1E] pt-16 text-[#F5F5F5] md:h-[calc(100vh-4rem)] md:min-h-0 md:overflow-hidden">
+        <div className="mx-auto grid max-w-6xl gap-5 px-4 py-6 md:h-full md:grid-cols-[220px_minmax(0,1fr)_260px] md:px-6">
           <aside className="hidden md:block">
             <section className="overflow-hidden rounded-lg border border-[#D6D6D6] bg-white">
               <div className="h-16 bg-gradient-to-r from-[#C1FA5A] to-[#9CCB35]" />
               <div className="px-4 pb-4">
-                <div className="-mt-6 flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-[#C1FA5A] text-sm font-bold text-[#1B1C1E]">KD</div>
-                <h2 className="mt-3 font-semibold">Kiran Dev</h2>
+                <img src="/assets/Logos/Mylogo.png" alt="Siranjeevi portfolio logo" className="-mt-6 h-12 w-12 rounded-full border-2 border-white bg-white object-contain p-1" />
+                <h2 className="mt-3 font-semibold">Siranjeevi</h2>
                 <p className="mt-1 text-xs leading-5 text-[#666]">Visual designer creating social campaigns and brand experiences.</p>
                 <div className="mt-4 border-t border-[#E8E8E8] pt-3 text-xs text-[#666]">Portfolio project</div>
-                <button onClick={closeProject} className="mt-2 text-left text-sm font-semibold text-[#557A12] hover:underline">â† All projects</button>
+                <button onClick={closeProject} className="mt-2 text-left text-sm font-semibold text-[#557A12] hover:underline">← All projects</button>
               </div>
             </section>
           </aside>
 
-          <section className="min-w-0">
-            <div className="mb-4 flex items-center justify-between rounded-lg border border-[#D6D6D6] bg-white px-4 py-3">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#666]">Project showcase</p>
-                <h1 className="mt-1 text-lg font-semibold">{selectedProject.title}</h1>
+          <section className="min-w-0 md:min-h-0 md:overflow-y-auto md:overscroll-contain">
+            <div>
+              <div className="sticky top-16 z-20 -mx-1 mb-4 flex gap-2 overflow-x-auto bg-[#1B1C1E] px-1 pb-2 pt-2 md:top-0">
+                <button onClick={closeProject} className="shrink-0 rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-white hover:border-[#C1FA5A] md:hidden">← Back</button>
+                {(['All', 'Product Poster', 'Event Poster', 'Special Day Poster'] as const).map((filter) => (
+                  <button key={filter} onClick={() => setSocialPostFilter(filter)} className={`shrink-0 rounded-full border px-4 py-2 text-xs font-semibold transition ${socialPostFilter === filter ? 'border-[#C1FA5A] bg-[#C1FA5A] text-[#1B1C1E]' : 'border-white/20 text-white hover:border-[#C1FA5A]'}`}>
+                    {filter}
+                  </button>
+                ))}
               </div>
-              <button onClick={closeProject} className="rounded-full px-3 py-2 text-sm font-semibold text-[#557A12] hover:bg-[#F3F9E7] md:hidden">Back</button>
-            </div>
-
-            <section className="mt-4 rounded-lg border border-[#D6D6D6] bg-white p-4">
-              <h2 className="font-semibold">Campaign impact</h2>
-              <div className="mt-3 grid grid-cols-2 gap-3 text-sm sm:grid-cols-3">
-                <div className="rounded-md bg-[#F3F2EF] p-3"><strong className="block text-lg">340%</strong><span className="text-xs text-[#666]">follower growth</span></div>
-                <div className="rounded-md bg-[#F3F2EF] p-3"><strong className="block text-lg">6.2%</strong><span className="text-xs text-[#666]">average engagement</span></div>
-                <div className="col-span-2 rounded-md bg-[#F3F2EF] p-3 sm:col-span-1"><strong className="block text-lg">100+</strong><span className="text-xs text-[#666]">creative assets</span></div>
-              </div>
-            </section>
-
-            <article className="mt-4 overflow-hidden rounded-lg border border-[#D6D6D6] bg-white">
-              {selectedProject.image && <img src={selectedProject.image} alt={`${selectedProject.title} campaign`} className="max-h-[540px] w-full bg-[#F4F7FB] object-contain" />}
-              <div className="p-4"><p className="text-xs text-[#7A7D8E]">{selectedProject.duration}</p><p className="mt-2 text-sm leading-6 text-[#333]">{selectedProject.overview}</p></div>
-            </article>
-
-            <div className="mt-5 space-y-4">
-              {socialMediaAssets.map((asset, index) => {
+              <div className="space-y-4">
+              {visibleSocialAssets.map((asset, index) => {
                 const assetUrl = `/assets/social-media/posts/${encodeURIComponent(asset.name)}`
                 const edit = socialPostEdits.find((item) => item.assetName === asset.name)
                 const date = edit?.date
@@ -1288,12 +1281,12 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
                 return (
                   <article key={asset.name} className="overflow-hidden rounded-lg border border-[#D6D6D6] bg-white">
                     <div className="flex items-center gap-3 p-4">
-                      <img src="/assets/Logos/Sands%20E.png" alt="SANDS logo" className="h-11 w-11 shrink-0 rounded-lg object-cover" />
+                      <img src="/assets/Logos/Mylogo.png" alt="Siranjeevi portfolio logo" className="h-11 w-11 shrink-0 rounded-lg bg-white object-contain p-1" />
                       <div className="min-w-0 flex-1">
-                        <p className="flex items-center gap-2 font-semibold"><img src="/assets/Logos/Sands%20E.png" alt="SANDS" className="h-6 w-6 rounded object-cover" /><span className="font-normal text-[#7A7D8E]">Campaign creative</span></p>
-                        <p className="text-xs text-[#7A7D8E]">{date} Â· {isPdf ? 'PDF document' : 'Image post'}</p>
+                        <p className="flex items-center gap-2 font-semibold"><img src="/assets/Logos/Mylogo.png" alt="Siranjeevi portfolio logo" className="h-6 w-6 rounded bg-white object-contain p-0.5" /><span className="font-normal text-[#7A7D8E]">Campaign creative</span></p>
+                        <p className="text-xs text-[#7A7D8E]">{date} · {isPdf ? 'PDF document' : 'Image post'}</p>
                       </div>
-                      <span className="text-xs font-semibold text-[#8A849C]">{index + 1} / {socialMediaAssets.length}</span>
+                      <span className="text-xs font-semibold text-[#8A849C]">{index + 1} / {visibleSocialAssets.length}</span>
                     </div>
                     {edit?.heading && <h3 className="px-4 pb-2 text-base font-semibold">{edit.heading}</h3>}
                     {edit?.content && <p className="px-4 pb-4 text-sm leading-6 text-[#444]">{edit.content}</p>}
@@ -1302,7 +1295,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
                         {edit?.image && <img src={edit.image} alt={edit.heading || `SANDS social media artwork ${index + 1}`} className="block max-h-[760px] w-full bg-[#F4F7FB] object-contain" />}
                         <iframe src={`${assetUrl}#view=FitH`} title={`PDF campaign document ${asset.name}`} loading="lazy" className="h-[min(72vh,700px)] w-full bg-white" />
                         <div className="flex items-center justify-between gap-3 p-3">
-                          <p className="truncate text-xs text-[#697080]">Original PDF Â· {asset.name}</p>
+                          <p className="truncate text-xs text-[#697080]">Original PDF · {asset.name}</p>
                           <a href={assetUrl} target="_blank" rel="noreferrer" className="shrink-0 rounded-full bg-[#C1FA5A] px-3 py-2 text-xs font-semibold text-[#1B1C1E] hover:bg-[#9CCB35]">Open PDF</a>
                         </div>
                       </div>
@@ -1311,11 +1304,13 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
                     )}
                     <div className="flex items-center justify-between border-t border-[#E8E8E8] px-4 py-3 text-xs text-[#697080]">
                       <span>{isPdf ? 'Document content from the supplied PDF' : 'Original supplied social media artwork'}</span>
-                      <span className="flex items-center gap-1 text-[#557A12]"><img src="/assets/Logos/Sands%20E.png" alt="SANDS" className="h-4 w-4 rounded-sm object-cover" /> Â· {date}</span>
+                      <span className="flex items-center gap-1 text-[#557A12]"><img src="/assets/Logos/Mylogo.png" alt="Siranjeevi portfolio logo" className="h-4 w-4 rounded-sm bg-white object-contain p-0.5" /> · {date}</span>
                     </div>
                   </article>
                 )
               })}
+              {visibleSocialAssets.length === 0 && <p className="rounded-xl border border-white/10 p-6 text-center text-sm text-white/70">No posters in this category yet. Assign a poster type in the admin page.</p>}
+              </div>
             </div>
             <ManagedContent page="social" />
           </section>
@@ -1325,10 +1320,10 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               <h2 className="font-semibold">About this project</h2>
               <p className="mt-3 text-sm leading-5 text-[#666]">A repeatable content system for a lifestyle brand across social channels.</p>
               <div className="mt-4 border-t border-[#E8E8E8] pt-3 text-xs leading-5 text-[#666]">
-                <p><strong className="text-[#333]">Role</strong><br />Visual design Â· Social content</p>
-                <p className="mt-3"><strong className="text-[#333]">Tools</strong><br />Photoshop Â· Illustrator Â· After Effects</p>
+                <p><strong className="text-[#333]">Role</strong><br />Visual design · Social content</p>
+                <p className="mt-3"><strong className="text-[#333]">Tools</strong><br />Photoshop · Illustrator · After Effects</p>
               </div>
-              <button onClick={closeProject} className="mt-4 text-sm font-semibold text-[#557A12] hover:underline">â† Back to projects</button>
+              <button onClick={closeProject} className="mt-4 text-sm font-semibold text-[#557A12] hover:underline">← Back to projects</button>
             </section>
           </aside>
         </div>
@@ -1375,7 +1370,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
             <p className="mt-4 text-xs font-semibold text-[#8A849C]">{selectedProject.duration}</p>
             {(selectedProject.id === 1 || selectedProject.id === 2 || selectedProject.id === 3 || selectedProject.id === 4 || selectedProject.id === 5 || selectedProject.id === 6 || selectedProject.id === 7) && (
               <div className="mt-5 grid gap-3 border-t border-[#E8E8E8] pt-5 sm:grid-cols-4">
-                {(selectedProject.id === 1 ? [["Role", "UX/UI Designer"], ["Project", "SANDS Corporate Website"], ["Industry", "Energy, Power & Industrial Technology"]] : selectedProject.id === 2 ? [["Role", "UX/UI Designer"], ["Project", "Precise3DM Website"], ["Industry", "Digital Manufacturing / 3D Technology"]] : selectedProject.id === 3 ? [["Role", "UX/UI Designer"], ["Project", "Graft3D Healthcare Website"], ["Industry", "Healthcare Technology / Medical 3D Printing"]] : selectedProject.id === 4 ? [["Role", "UX/UI Designer"], ["Project", "WildPlantTS Corporate Website"], ["Industry", "Reality Capture / Digital Engineering"], ["Focus", "B2B UX/UI Â· Information Architecture Â· Service Discovery"]] : selectedProject.id === 5 ? [["Role", "UX/UI Designer"], ["Project", "NM Construction & Designing Website"], ["Industry", "Construction & Architecture"], ["Focus", "Corporate Website Â· Project Showcase Â· Lead Generation"]] : selectedProject.id === 6 ? [["Role", "UX/UI Designer"], ["Project", "Shiv Shakti Crackers World Website"], ["Industry", "E-commerce / Festive Retail"], ["Focus", "UX/UI Â· Product Discovery Â· Catalogue Design Â· Responsive Web Design"]] : [["Role", "UX/UI Designer"], ["Project", "Mahaperiyava Imports & Exports Website"], ["Industry", "Import & Export"], ["Focus", "Startup Website Â· UX/UI Design Â· Brand Presence Â· Lead Generation"]]).map(([label, value]) => (
+                {(selectedProject.id === 1 ? [["Role", "UX/UI Designer"], ["Project", "SANDS Corporate Website"], ["Industry", "Energy, Power & Industrial Technology"]] : selectedProject.id === 2 ? [["Role", "UX/UI Designer"], ["Project", "Precise3DM Website"], ["Industry", "Digital Manufacturing / 3D Technology"]] : selectedProject.id === 3 ? [["Role", "UX/UI Designer"], ["Project", "Graft3D Healthcare Website"], ["Industry", "Healthcare Technology / Medical 3D Printing"]] : selectedProject.id === 4 ? [["Role", "UX/UI Designer"], ["Project", "WildPlantTS Corporate Website"], ["Industry", "Reality Capture / Digital Engineering"], ["Focus", "B2B UX/UI · Information Architecture · Service Discovery"]] : selectedProject.id === 5 ? [["Role", "UX/UI Designer"], ["Project", "NM Construction & Designing Website"], ["Industry", "Construction & Architecture"], ["Focus", "Corporate Website · Project Showcase · Lead Generation"]] : selectedProject.id === 6 ? [["Role", "UX/UI Designer"], ["Project", "Shiv Shakti Crackers World Website"], ["Industry", "E-commerce / Festive Retail"], ["Focus", "UX/UI · Product Discovery · Catalogue Design · Responsive Web Design"]] : [["Role", "UX/UI Designer"], ["Project", "Mahaperiyava Imports & Exports Website"], ["Industry", "Import & Export"], ["Focus", "Startup Website · UX/UI Design · Brand Presence · Lead Generation"]]).map(([label, value]) => (
                   <div key={label}><p className="text-[11px] font-bold uppercase tracking-wider text-[#9A96A8]">{label}</p><p className="mt-1 font-semibold text-[#343447]">{value}</p></div>
                 ))}
               </div>
@@ -1392,7 +1387,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               <DetailSection title="Design Approach" color={selectedProject.accent}>
                 <p>Technical specifications are introduced progressively, after visitors understand the problem, process, technology, and outcome. The Scan-to-CAD journey is made visible:</p>
                 <div className="mt-4 flex flex-wrap items-center gap-2 rounded-xl bg-[#F9F8F6] p-4 text-xs font-bold text-[#343447]">
-                  {["Physical Part", "3D Scanning", "Scan Data / Mesh", "Reverse Engineering", "CAD Model", "Manufacture / Inspect / 3D Print"].map((step, index) => <span key={step} className="flex items-center gap-2"><span className="rounded-lg bg-white px-3 py-2 shadow-sm">{step}</span>{index < 5 && <span className="text-[#9A96A8]">â†’</span>}</span>)}
+                  {["Physical Part", "3D Scanning", "Scan Data / Mesh", "Reverse Engineering", "CAD Model", "Manufacture / Inspect / 3D Print"].map((step, index) => <span key={step} className="flex items-center gap-2"><span className="rounded-lg bg-white px-3 py-2 shadow-sm">{step}</span>{index < 5 && <span className="text-[#9A96A8]">→</span>}</span>)}
                 </div>
                 <p className="mt-4">This visual workflow helps visitors understand how a physical component becomes an editable digital model ready for manufacturing, inspection, or 3D printing.</p>
               </DetailSection>
@@ -1414,7 +1409,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               <DetailSection title="Design Approach" color={selectedProject.accent}>
                 <p>The experience makes the path from medical imaging to a usable patient-specific solution understandable at a glance, while presenting clinical and technical details progressively.</p>
                 <div className="mt-4 flex flex-wrap items-center gap-2 rounded-xl bg-[#F9F8F6] p-4 text-xs font-bold text-[#343447]">
-                  {["CT / MRI / CBCT", "DICOM Processing", "Image Segmentation", "3D Anatomical Model", "Bio-CAD Design", "Medical 3D Printing", "Clinical Application"].map((step, index) => <span key={step} className="flex items-center gap-2"><span className="rounded-lg bg-white px-3 py-2 shadow-sm">{step}</span>{index < 6 && <span className="text-[#9A96A8]">â†’</span>}</span>)}
+                  {["CT / MRI / CBCT", "DICOM Processing", "Image Segmentation", "3D Anatomical Model", "Bio-CAD Design", "Medical 3D Printing", "Clinical Application"].map((step, index) => <span key={step} className="flex items-center gap-2"><span className="rounded-lg bg-white px-3 py-2 shadow-sm">{step}</span>{index < 6 && <span className="text-[#9A96A8]">→</span>}</span>)}
                 </div>
                 <p className="mt-4">The design principles are clarity, trust, simplicity, precision, and accessibility, balancing medical professionalism with modern technology.</p>
               </DetailSection>
@@ -1462,9 +1457,9 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               <DetailSection title="Customer Journeys" color={selectedProject.accent}>
                 <div className="grid gap-3 md:grid-cols-3">
                   {[
-                    ["Buy technologies", "Project requirements â†’ Explore technologies â†’ Compare solutions â†’ Book a demo â†’ Request a quote"],
-                    ["Outsource engineering", "Project requirements â†’ Explore services â†’ Select an application â†’ Review deliverables â†’ Request a consultation"],
-                    ["Plan a digital twin", "Facility assessment â†’ Reality capture â†’ Point-cloud processing â†’ Digital model â†’ Digital twin solution"],
+                    ["Buy technologies", "Project requirements → Explore technologies → Compare solutions → Book a demo → Request a quote"],
+                    ["Outsource engineering", "Project requirements → Explore services → Select an application → Review deliverables → Request a consultation"],
+                    ["Plan a digital twin", "Facility assessment → Reality capture → Point-cloud processing → Digital model → Digital twin solution"],
                   ].map(([title, flow]) => <div key={title} className="rounded-xl border border-[#E8E8E8] bg-white p-4"><h3 className="font-bold text-[#1A1A2E]">{title}</h3><p className="mt-2 text-xs leading-5">{flow}</p></div>)}
                 </div>
               </DetailSection>
@@ -1499,8 +1494,8 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               <DetailSection title="Customer Journeys" color={selectedProject.accent}>
                 <div className="grid gap-3 md:grid-cols-2">
                   {[
-                    ["Building a home", "Discover the website â†’ Explore services â†’ View residential projects â†’ Understand the process â†’ Request a consultation"],
-                    ["Planning a commercial project", "Explore capabilities â†’ Browse commercial projects â†’ Review project details â†’ Submit an enquiry"],
+                    ["Building a home", "Discover the website → Explore services → View residential projects → Understand the process → Request a consultation"],
+                    ["Planning a commercial project", "Explore capabilities → Browse commercial projects → Review project details → Submit an enquiry"],
                   ].map(([title, flow]) => <div key={title} className="rounded-xl border border-[#E8E8E8] bg-white p-4"><h3 className="font-bold text-[#1A1A2E]">{title}</h3><p className="mt-2 text-xs leading-5">{flow}</p></div>)}
                 </div>
               </DetailSection>
@@ -1518,7 +1513,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
                     ["04. Enquire", "Provide a clear next step for product questions and customer assistance."],
                   ].map(([title, description]) => <div key={title} className="rounded-xl bg-[#F9F8F6] p-4"><h3 className="mb-1 font-bold text-[#1A1A2E]">{title}</h3><p>{description}</p></div>)}
                 </div>
-                <p className="mt-4">The information architecture connects the main shopping needs: Home â†’ Categories â†’ Product Listing â†’ Product Details â†’ Cart or Enquiry â†’ Contact. Category content should reflect the products included in the actual catalogue.</p>
+                <p className="mt-4">The information architecture connects the main shopping needs: Home → Categories → Product Listing → Product Details → Cart or Enquiry → Contact. Category content should reflect the products included in the actual catalogue.</p>
               </DetailSection>
               <DetailSection title="Key Website Sections" color={selectedProject.accent}>
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -1534,8 +1529,8 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               <DetailSection title="Shopping Journeys" color={selectedProject.accent}>
                 <div className="grid gap-3 md:grid-cols-2">
                   {[
-                    ["Find a specific product", "Homepage â†’ Search â†’ Product Listing â†’ Product Details â†’ Enquiry"],
-                    ["Explore festive offers", "Homepage â†’ Promotional Banner â†’ Category â†’ Featured Products â†’ Offer Details"],
+                    ["Find a specific product", "Homepage → Search → Product Listing → Product Details → Enquiry"],
+                    ["Explore festive offers", "Homepage → Promotional Banner → Category → Featured Products → Offer Details"],
                   ].map(([title, flow]) => <div key={title} className="rounded-xl border border-[#E8E8E8] bg-white p-4"><h3 className="font-bold text-[#1A1A2E]">{title}</h3><p className="mt-2 text-xs leading-5">{flow}</p></div>)}
                 </div>
               </DetailSection>
@@ -1637,7 +1632,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
           </section>}
         </div>
         <footer className="mt-6 flex min-h-48 items-center justify-center bg-[#1A1A2E] px-6 text-center text-white">
-          <div><p className="text-lg font-bold" style={{ fontFamily: "'Outfit', sans-serif" }}>Thanks for viewing this project</p><button onClick={closeProject} className="mt-4 text-sm font-semibold" style={{ color: selectedProject.accent }}>â† Back to all projects</button></div>
+          <div><p className="text-lg font-bold" style={{ fontFamily: "'Outfit', sans-serif" }}>Thanks for viewing this project</p><button onClick={closeProject} className="mt-4 text-sm font-semibold" style={{ color: selectedProject.accent }}>← Back to all projects</button></div>
         </footer>
       </main>
     )
@@ -1680,6 +1675,82 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
             ref={railRef}
             onScroll={updateActiveCard}
             onWheel={handleWheel}
+            onPointerDown={(event) => {
+              if (event.pointerType !== 'mouse' || event.button !== 0) return
+              dragState.current = { pointerId: event.pointerId, startX: event.clientX, startScrollLeft: event.currentTarget.scrollLeft, moved: false }
+              suppressClick.current = false
+              event.currentTarget.style.scrollBehavior = 'auto'
+              event.currentTarget.style.scrollSnapType = 'none'
+              event.currentTarget.setPointerCapture(event.pointerId)
+            }}
+            onPointerMove={(event) => {
+              const drag = dragState.current
+              if (drag.pointerId !== event.pointerId) return
+              const distance = event.clientX - drag.startX
+              if (Math.abs(distance) > 4) drag.moved = true
+              if (drag.moved) {
+                event.preventDefault()
+                event.currentTarget.scrollLeft = drag.startScrollLeft - distance
+              }
+            }}
+            onPointerUp={(event) => {
+              const drag = dragState.current
+              if (drag.pointerId !== event.pointerId) return
+              suppressClick.current = drag.moved
+              if (drag.moved) window.setTimeout(() => { suppressClick.current = false }, 0)
+              if (drag.moved) {
+                const rail = event.currentTarget
+                const railRect = rail.getBoundingClientRect()
+                const cards = Array.from(rail.querySelectorAll<HTMLElement>('[data-project-card]'))
+                let nearest: HTMLElement | undefined
+                let nearestDistance = Infinity
+                cards.forEach((card) => {
+                  const cardRect = card.getBoundingClientRect()
+                  const center = cardRect.left - railRect.left + cardRect.width / 2
+                  const distance = Math.abs(center - rail.clientWidth / 2)
+                  if (distance < nearestDistance) {
+                    nearest = card
+                    nearestDistance = distance
+                  }
+                })
+                if (nearest) {
+                  const cardRect = nearest.getBoundingClientRect()
+                  const cardCenter = cardRect.left - railRect.left + rail.scrollLeft + cardRect.width / 2
+                  rail.style.scrollBehavior = 'smooth'
+                  rail.scrollTo({ left: cardCenter - rail.clientWidth / 2, behavior: 'smooth' })
+                  window.setTimeout(() => { rail.style.scrollSnapType = 'x mandatory' }, 500)
+                } else {
+                  rail.style.scrollBehavior = 'smooth'
+                  rail.style.scrollSnapType = 'x mandatory'
+                }
+              } else {
+                event.currentTarget.style.scrollBehavior = 'smooth'
+                event.currentTarget.style.scrollSnapType = 'x mandatory'
+              }
+              dragState.current = { pointerId: -1, startX: 0, startScrollLeft: 0, moved: false }
+              if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId)
+            }}
+            onPointerCancel={(event) => {
+              if (dragState.current.pointerId !== event.pointerId) return
+              dragState.current = { pointerId: -1, startX: 0, startScrollLeft: 0, moved: false }
+            }}
+            onClickCapture={(event) => {
+              if (suppressClick.current) {
+                suppressClick.current = false
+                event.preventDefault()
+                event.stopPropagation()
+                return
+              }
+              const target = event.target instanceof Element ? event.target : null
+              const card = target?.closest<HTMLElement>('[data-project-card]')
+                ?? document.elementFromPoint(event.clientX, event.clientY)?.closest<HTMLElement>('[data-project-card]')
+              const projectId = Number(card?.dataset.projectId)
+              if (Number.isFinite(projectId) && projectId > 0) {
+                event.preventDefault()
+                event.stopPropagation()
+                openProject(projectId)
+              }
+            }}
             className="project-rail flex w-full items-center gap-6 overflow-x-auto"
             style={{
               scrollSnapType: 'x mandatory',
@@ -1698,8 +1769,8 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
                 <button
                   key={project.id}
                   data-project-card
+                  data-project-id={project.id}
                   type="button"
-                  onClick={() => openProject(project.id)}
                   aria-label={`Open ${projectCategoryLabel(project.category)} project details`}
                   className="group shrink-0 overflow-hidden rounded-[28px] bg-transparent text-left focus-visible:outline focus-visible:outline-4 focus-visible:outline-[#C1FA5A]"
                   style={{
@@ -1714,7 +1785,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
                     transition: 'transform 420ms ease, filter 420ms ease, opacity 420ms ease, box-shadow 420ms ease',
                   }}
                 >
-                  <div className="relative flex aspect-[16/8] items-center justify-center overflow-hidden text-center" style={{ background: focused ? '#C1FA5A' : 'rgba(27,28,30,0.42)', backdropFilter: focused ? 'none' : 'blur(14px)', WebkitBackdropFilter: focused ? 'none' : 'blur(14px)' }}>
+                  <div className="project-card-face relative flex aspect-[16/8] items-center justify-center overflow-hidden text-center" style={{ background: focused ? '#C1FA5A' : 'rgba(27,28,30,0.42)', backdropFilter: focused ? 'none' : 'blur(14px)', WebkitBackdropFilter: focused ? 'none' : 'blur(14px)' }}>
                     <div className="relative z-10 px-6" style={{ color: focused ? '#1B1C1E' : '#FFFFFF' }}>
                       <h3 className="text-3xl sm:text-5xl font-extrabold" style={{ fontFamily: "'Outfit', sans-serif" }}>
                         {displayCategoryHeading(project.category, categorySettings)}

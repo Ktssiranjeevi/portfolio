@@ -67,11 +67,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {
-  .hero-avatar {
-    height: clamp(250px, 46vh, 380px);
-    max-width: 82vw;
+  .home-hero {
+    aspect-ratio: auto !important;
+    padding-top: 64px !important;
+    background: #101112;
   }
 
+  .home-hero .hero-desktop {
+    display: none;
+  }
+
+  .hero-mobile-poster {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-avatar {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .hero-mobile-poster {
+    display: none;
+  }
 }
 
 
@@ -96,10 +117,31 @@ h1, h2, h3, h4, h5, h6 {
 .project-rail {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.project-rail:active {
+  cursor: grabbing;
 }
 
 .project-rail::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 767px) {
+  .project-rail {
+    gap: 14px !important;
+    padding-inline: 11vw !important;
+  }
+
+  .project-rail [data-project-card] {
+    flex-basis: 78vw !important;
+  }
+
+  .project-card-face {
+    aspect-ratio: 4 / 5 !important;
+  }
 }
 
 @keyframes projectBackgroundFade {
@@ -215,4 +257,78 @@ h1, h2, h3, h4, h5, h6 {
 .admin-panel input::placeholder,
 .admin-panel textarea::placeholder {
   color: rgba(245, 245, 245, 0.5);
+}
+
+.video-playlist-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.video-playlist-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keep every admin section available on phones while making the category
+   controls browsable in a compact horizontal rail. */
+@media (max-width: 767px) {
+  .admin-panel .admin-mobile-nav {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.15rem 0.1rem 0.55rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(193, 250, 90, 0.4) transparent;
+  }
+
+  .admin-panel .admin-mobile-nav button {
+    width: auto;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .admin-panel aside > div:first-child {
+    margin-bottom: 0.85rem;
+  }
+
+  .admin-panel header h1 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .admin-panel header > button {
+    width: 100%;
+  }
+
+  .admin-panel form,
+  .admin-panel section {
+    min-width: 0;
+  }
+
+  .admin-panel input,
+  .admin-panel textarea,
+  .admin-panel select {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .admin-panel input[type="file"] {
+    min-height: 44px;
+    padding: 0.55rem;
+    border: 1px solid rgba(245, 245, 245, 0.22);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 14px;
+  }
+
+  .admin-panel input[type="file"]::file-selector-button {
+    min-height: 40px;
+    margin-right: 0.65rem;
+    padding: 0.5rem 0.8rem;
+    border: 0;
+    border-radius: 0.55rem;
+    background: #C1FA5A;
+    color: #1B1C1E;
+    font-weight: 700;
+  }
 }

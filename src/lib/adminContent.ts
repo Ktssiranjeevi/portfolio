@@ -54,6 +54,7 @@ export function projectUpdateEventName() {
 
 export type SocialPostEdit = {
   assetName: string
+  category?: 'Product Poster' | 'Event Poster' | 'Special Day Poster'
   heading: string
   date: string
   content: string

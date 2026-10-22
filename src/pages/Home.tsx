@@ -62,13 +62,13 @@ function HeroSection() {
   return (
     <section
       id="hero-section"
-      className="relative w-full"
+      className="relative w-full home-hero"
       style={{ paddingTop: '64px', aspectRatio: '1920 / 979' }}
     >
       <img
         src={heroBg}
         alt="UI/UX Designer, Graphic Design, Video Editing and 3D Modeling â€” portfolio overview"
-        className="left-0 w-full h-auto block will-change-transform"
+        className="hero-desktop left-0 w-full h-auto block will-change-transform"
         style={{
           position: 'sticky',
           top: '64px',
@@ -77,6 +77,11 @@ function HeroSection() {
           transform: `scale(${1 - scrollProgress * 0.1})`,
           transformOrigin: 'center top',
         }}
+      />
+      <img
+        src="/assets/home/Neon%20UI_UX%20Designer%20Portfolio%20Poster.png"
+        alt="UI/UX designer portfolio poster showing design work, tools, and the designer"
+        className="hero-mobile-poster"
       />
     </section>
   )
