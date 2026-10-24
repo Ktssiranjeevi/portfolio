@@ -24,6 +24,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
+/* Keep horizontal swipe and scroll areas usable without showing a scrollbar. */
+* {
+  scrollbar-width: none;
+}
+::-webkit-scrollbar:horizontal {
+  display: none;
+  height: 0;
+}
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(193,250,90,0.35); border-radius: 99px; }
 

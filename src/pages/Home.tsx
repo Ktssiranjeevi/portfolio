@@ -274,7 +274,7 @@ function ExperienceSection() {
             <div className="py-2">
               <p className="text-sm leading-relaxed" style={{ color: '#F5F5F5' }}>{company.summary}</p>
               <h4 className="mt-5 mb-3 text-xs font-bold uppercase tracking-wider" style={{ color: '#C1FA5A', fontFamily: "'Outfit', sans-serif" }}>Key contributions</h4>
-              <ul className="space-y-2">{company.contributions.map(item => <li key={item} className="flex gap-2 text-sm leading-relaxed" style={{ color: '#F5F5F5' }}><span style={{ color: '#C1FA5A' }}>â€¢</span><span>{item}</span></li>)}</ul>
+              <ul className="space-y-2">{company.contributions.map(item => <li key={item} className="flex gap-2 text-sm leading-relaxed" style={{ color: '#F5F5F5' }}><span aria-hidden="true" style={{ color: '#C1FA5A' }}>•</span><span>{item}</span></li>)}</ul>
             </div>
           </div>
 
@@ -375,9 +375,9 @@ function ContactSection() {
 
               <div className="space-y-4 mb-8">
                 {[
-                  { icon: "âœ‰ï¸", label: "Email", value: "arjunmehta.design@gmail.com" },
-                  { icon: "ðŸ“±", label: "Phone", value: "+91 98765 43210" },
-                  { icon: "ðŸ“", label: "Location", value: "India (Open to Remote)" },
+                  { icon: "✉️", label: "Email", value: "siranjeevikts@gmail.com" },
+                  { icon: "📱", label: "Phone", value: "6383934697" },
+                  { icon: "📍", label: "Location", value: "Chennai" },
                 ].map(item => (
                   <div
                     key={item.label}
@@ -438,7 +438,7 @@ function ContactSection() {
                   className="text-sm font-semibold"
                   style={{ color: '#C1FA5A', fontFamily: "'Outfit', sans-serif" }}
                 >
-                  ðŸ“… Currently Available
+                  📅 Currently Available
                 </p>
                 <p className="text-xs mt-1" style={{ color: '#F5F5F5' }}>
                   Open to full-time roles & freelance projects
@@ -452,7 +452,7 @@ function ContactSection() {
             >
               {sent ? (
                 <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                  <div className="text-5xl mb-4">ðŸŽ‰</div>
+                  <div className="text-5xl mb-4">🎉</div>
                   <h3
                     className="text-lg font-bold mb-2"
                     style={{ color: '#F5F5F5', fontFamily: "'Outfit', sans-serif" }}
@@ -596,7 +596,7 @@ function Footer({ onNavigate }: { onNavigate: (p: Page) => void }) {
 
           {/* Copyright */}
           <p className="text-xs" style={{ color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
-            Â© 2024 Arjun Mehta. Crafted with ðŸ’œ
+            © 2024 Arjun Mehta. Crafted with 💚
           </p>
         </div>
       </div>

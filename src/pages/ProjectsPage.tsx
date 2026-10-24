@@ -10,9 +10,12 @@ const socialMediaSectionBackground = '/assets/backgrounds/social-media-section-b
 const videoSectionBackground = '/assets/backgrounds/video-section-background.webp'
 const logoDesignSectionBackground = '/assets/backgrounds/logo-design-section-background.webp'
 const expoEventsSectionBackground = '/assets/backgrounds/expo-events-section-background.webp'
-import socialMediaAssets from '../data/socialMediaAssets.json'
+import socialMediaAssetData from '../data/socialMediaAssets.json'
 import ManagedContent from '../components/ManagedContent'
 import { readProjectCatalog, readProjectCategorySettings, readSocialPostEdits } from '../lib/adminContent'
+
+type SocialMediaAsset = { name: string; kind: string; timestamp: number; path?: string; category?: 'Product Poster' | 'Event Poster' | 'Special Day Poster' }
+const socialMediaAssets = socialMediaAssetData as SocialMediaAsset[]
 
 interface ProjectsPageProps {
   onNavigate: (page: Page) => void
@@ -112,7 +115,7 @@ export const allProjects = [
     accent: "#C47A45",
   },
   {
-    id: 6, title: "Shiv Shakti Crackers World E-commerce Website", category: "Websites",
+    id: 6, title: "Shiv Shakti Crackers E-commerce", category: "Web Apps",
     duration: "UX/UI Design",
     tags: ["Figma", "E-commerce", "HTML5", "CSS3", "JavaScript"],
     overview: "A festive e-commerce website design project for Shiv Shakti Crackers World, a fireworks retail business offering crackers, sparklers, fancy fireworks, and celebration packages. The online catalogue helps customers explore products, discover offers, compare options, and find suitable items for festive celebrations.",
@@ -124,6 +127,18 @@ export const allProjects = [
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop&auto=format",
     ],
     accent: "#D84A28",  },
+  {
+    id: 27, title: "Texture E-commerce", category: "Web Apps",
+    duration: "UX/UI Design",
+    tags: ["Figma", "E-commerce", "Product Design", "Responsive Web"],
+    overview: "An online shopping experience for Texture, designed to help customers discover products, compare options, and complete purchases through a clear, polished storefront.",
+    challenge: "A broad product catalogue can make browsing and comparison feel overwhelming. Customers need helpful categories, consistent product information, and a straightforward path from discovery to checkout.",
+    outcome: "The storefront groups products into easy-to-browse collections, uses consistent product cards and detail pages, and supports a simple cart and checkout journey across desktop and mobile.",
+    process: ["Discovery", "Content Structure", "User Flows", "Wireframes", "UI Design", "Prototype"],
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=700&fit=crop&auto=format",
+    screens: ["https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop&auto=format"],
+    accent: "#4ECDC4",
+  },
   {
     id: 7, title: "Mahaperiyava Imports & Exports Startup Website", category: "Websites",
     duration: "UX/UI Design",
@@ -154,14 +169,13 @@ export const allProjects = [
     accent: "#4ECDC4",
   },
   {
-    id: 8, title: "SANDS B2B Analytics Dashboard", category: "Web Apps",
-    duration: "12 weeks · 2023",
-    tags: ["Figma", "React", "Tailwind CSS", "Chart.js"],
-    overview: "An enterprise analytics dashboard built for Signals & Systems India — real-time data visualisation, CRM integration, role-based access control, and custom report generation for B2B operations teams.",
-    challenge: "The existing reporting system required users to export CSV files and open Excel to analyse data. Power users were spending 3+ hours per week on manual reporting. The redesign had to bring all insights into a single live interface without overwhelming non-technical users.",
-    outcome: "Reporting time per user dropped from 3 hours/week to 20 minutes. User satisfaction score increased from 3.1 to 4.6 out of 5.",
-    process: ["Discovery", "Data Architecture", "User Flows", "Wireframes", "Design System", "Prototype", "Dev Handoff"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop&auto=format",
+    id: 8, title: "SANDS Connect", category: "Web Apps",
+    duration: "B2B Enterprise Web Application",
+    tags: ["Product Strategy", "Information Architecture", "User Flows", "Wireframing", "UI Design", "Dashboard Design"],
+    overview: "Sands Connect is an integrated enterprise management platform that connects CRM, Tender Management, People Management, Store Management, Production, Export, Account Management, Business Management, and Task Management. It creates a unified digital workspace where employees can manage responsibilities, collaborate across departments, track project progress, and access business information efficiently.",
+    challenge: "Business operations relied on disconnected departmental workflows and manual communication. Lead assignment and follow-ups were difficult to track, production, inventory, and order status lacked visibility, cross-department requests were hard to coordinate, financial information was fragmented, and leaders lacked consolidated performance data.",
+    outcome: "The proposed experience is designed to centralize operations, connect workflows from lead generation to project closure, improve collaboration and accountability, and provide role-based operational and executive visibility. These are intended outcomes of the design, not measured results unless validated through implementation and user feedback.",
+    process: ["Discover", "Define", "Structure", "Design", "Validate"],    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop&auto=format",
     screens: [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop&auto=format",
       "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=500&fit=crop&auto=format",
@@ -169,21 +183,20 @@ export const allProjects = [
     accent: "#C1FA5A",
   },
   {
-    id: 9, title: "HealthTrack Patient Portal", category: "Web Apps",
-    duration: "10 weeks · 2023",
-    tags: ["Figma", "HTML", "CSS", "JavaScript"],
-    overview: "A health monitoring SaaS with patient-facing dashboards, appointment scheduling, telemedicine session management, and HIPAA-compliant UX patterns throughout.",
-    challenge: "Healthcare UX must balance information density (clinicians need data fast) with clarity (patients are often stressed when using it). Designing for both user types in a single system required a deeply considered role-based architecture.",
-    outcome: "Clinician onboarding time reduced by 60%. Patient portal adoption increased from 18% to 67% of registered users.",
-    process: ["Research", "User Personas", "User Flows", "Wireframes", "UI Design", "Usability Testing"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=700&fit=crop&auto=format",
+    id: 9, title: "Argus Dashboard", category: "Web Apps",
+    duration: "Existing Product Redesign · Web Application",
+    tags: ["UX Audit", "Usability Testing", "Information Architecture", "Visual Hierarchy", "Interactive Design", "Data Visualization"],
+    overview: "Argus is an industrial monitoring and analytics platform that displays data collected from vibration sensors and received from a server. It enables users to monitor machine conditions, review sensor readings, and analyze performance through interactive dashboards. The redesign evaluates the existing experience and improves navigation, information hierarchy, and interaction patterns while preserving core monitoring functionality.",
+    challenge: "The operational application presented complex monitoring data in ways that made important information harder to identify. The hierarchy of machine status, sensor readings, and analytics needed refinement; navigation and user flows could be more intuitive; and technical data needed to be easier to understand without unnecessary complexity.",
+    outcome: "The redesign was intended to make monitoring information easier to understand, improve dashboard navigation, reduce friction when exploring sensor data and analytics, and help users find relevant information more efficiently. These are intended outcomes; quantified improvements require usability test results or post-launch data.",
+    process: ["Audit", "Test", "Analyze", "Restructure", "Redesign", "Prototype"],    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=700&fit=crop&auto=format",
     screens: [
       "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=500&fit=crop&auto=format",
     ],
     accent: "#4ECDC4",
   },
   {
-    id: 10, title: "HR Management System", category: "Web Apps",
+    id: 10, title: "ENMS Dashboard", category: "Web Apps",
     duration: "8 weeks · 2022",
     tags: ["Figma", "Adobe XD"],
     overview: "A comprehensive HRMS covering employee onboarding, leave management, performance reviews, payroll integration, and org chart visualisation — all in a unified interface that HR teams actually want to use.",
@@ -197,7 +210,7 @@ export const allProjects = [
     accent: "#FFB347",
   },
   {
-    id: 11, title: "CRM Sales Pipeline", category: "Web Apps",
+    id: 11, title: "Solar Aggregator Dashboard", category: "Web Apps",
     duration: "6 weeks · 2022",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
     overview: "A visual CRM with Kanban-style pipeline management, contact enrichment from LinkedIn, automated follow-up reminders, email threading, and real-time team collaboration.",
@@ -211,7 +224,7 @@ export const allProjects = [
     accent: "#C1FA5A",
   },
   {
-    id: 12, title: "Inventory Management Portal", category: "Web Apps",
+    id: 12, title: "Time Synchronization Dashboard", category: "Web Apps",
     duration: "5 weeks · 2022",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript"],
     overview: "A warehouse inventory system with barcode scanning integration, real-time low-stock alerts, vendor management, purchase order workflows, and auto-reorder logic.",
@@ -221,6 +234,18 @@ export const allProjects = [
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=700&fit=crop&auto=format",
     screens: [],
     accent: "#A8E6CF",
+  },
+  {
+    id: 26, title: "Scan to CAD Converter Tool", category: "Web Apps",
+    duration: "UX/UI Design",
+    tags: ["Figma", "3D Scanning", "CAD", "Web App"],
+    overview: "A browser-based tool concept for converting 3D scan data into CAD-ready models. The workflow helps engineering teams upload scan files, review processing status, inspect model output, and prepare files for downstream design work.",
+    challenge: "Scan-to-CAD work can involve complex file formats and technical steps that are difficult to track. Users need a clear way to understand accepted inputs, monitor conversion progress, review results, and resolve issues before downloading their files.",
+    outcome: "A guided conversion flow makes each step visible, from upload and processing through model review and export. Clear status feedback and organized file details help users move through a technical workflow with confidence.",
+    process: ["Discovery", "Workflow Mapping", "Information Architecture", "Wireframes", "UI Design", "Prototype"],
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=700&fit=crop&auto=format",
+    screens: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop&auto=format"],
+    accent: "#C1FA5A",
   },
   {
     id: 13, title: "Mobile Banking App", category: "Mobile Apps",
@@ -1096,12 +1121,14 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
   const [visible, setVisible] = useState(true)
   const [activeIndex, setActiveIndex] = useState(0)
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(null)
+  const [projectCategoryMenuOpen, setProjectCategoryMenuOpen] = useState(false)
   const [activeYoutubeIndex, setActiveYoutubeIndex] = useState(0)
   const [activeVideoFilter, setActiveVideoFilter] = useState<'All' | 'Product video' | 'Events'>('All')
   const [socialPostFilter, setSocialPostFilter] = useState<'All' | 'Product Poster' | 'Event Poster' | 'Special Day Poster'>('All')
   const projectCatalog = readProjectCatalog<PortfolioProject>(allProjects)
   const categorySettings = readProjectCategorySettings()
   const railRef = useRef<HTMLDivElement>(null)
+  const projectNavRef = useRef<HTMLDivElement>(null)
   const dragState = useRef({ pointerId: -1, startX: 0, startScrollLeft: 0, moved: false })
   const suppressClick = useRef(false)
   const audioContextRef = useRef<AudioContext | null>(null)
@@ -1241,7 +1268,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
   if (selectedProject && (selectedProject.id === 17 || selectedProject.category === 'Social Media Posts' || selectedProject.category === 'Social Media')) {
     const visibleSocialAssets = socialPostFilter === 'All'
       ? socialMediaAssets
-      : socialMediaAssets.filter((asset) => socialPostEdits.find((edit) => edit.assetName === asset.name)?.category === socialPostFilter)
+      : socialMediaAssets.filter((asset) => (socialPostEdits.find((edit) => edit.assetName === asset.name)?.category ?? asset.category ?? 'Product Poster') === socialPostFilter)
     return (
       <main className="project-detail-page min-h-screen bg-[#1B1C1E] pt-16 text-[#F5F5F5] md:h-[calc(100vh-4rem)] md:min-h-0 md:overflow-hidden">
         <div className="mx-auto grid max-w-6xl gap-5 px-4 py-6 md:h-full md:grid-cols-[220px_minmax(0,1fr)_260px] md:px-6">
@@ -1270,7 +1297,7 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               </div>
               <div className="space-y-4">
               {visibleSocialAssets.map((asset, index) => {
-                const assetUrl = `/assets/social-media/posts/${encodeURIComponent(asset.name)}`
+                const assetUrl = asset.path ?? `/assets/social-media/posts/${encodeURIComponent(asset.name)}`
                 const edit = socialPostEdits.find((item) => item.assetName === asset.name)
                 const date = edit?.date
                   ? new Date(`${edit.date}T00:00:00`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
@@ -1332,14 +1359,54 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
   }
 
   if (selectedProject) {
-    const projectChoices = projectCatalog.filter((item) => item.category === selectedProject.category)
-    const websiteLabels = ['Sands', 'Precise3DM', 'Graft3D', 'WildplantTS', 'NMCdesigns', 'shivshakticrackers', 'Mahaperiyava']
+    const webAppOrder = [8, 9, 10, 11, 12, 26, 6, 27]
+    const projectChoices = projectCatalog
+      .filter((item) => item.category === selectedProject.category)
+      .sort((a, b) => selectedProject.category === 'Web Apps' ? webAppOrder.indexOf(a.id) - webAppOrder.indexOf(b.id) : 0)
+    const detailCategories = [...new Set(projectCatalog.map((project) => project.category))]
     return (
       <main className="project-detail-page min-h-screen pt-16" style={{ background: '#1B1C1E' }}>
         <div className="sticky top-16 z-30 border-b border-[#E8E8E8] bg-white/95 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center gap-2 px-3 py-2 sm:gap-4 sm:px-8 sm:py-3">
-            <span className="shrink-0 text-xs font-bold text-[#1A1A2E] sm:text-sm">{selectedProject.category}</span>
-            <div className="min-w-0 flex-1 overflow-x-auto">
+          <div className="mx-auto flex w-full max-w-7xl items-center gap-2 px-3 py-1 sm:gap-4 sm:px-8 sm:py-1.5">
+            <button
+              type="button"
+              onClick={closeProject}
+              aria-label="Back to projects"
+              title="Back to projects"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1FA5A] sm:h-10 sm:w-10"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <div className="relative -my-1 shrink-0 self-stretch sm:-my-1.5">
+              <button
+                type="button"
+                onClick={() => setProjectCategoryMenuOpen((open) => !open)}
+                aria-haspopup="menu"
+                aria-expanded={projectCategoryMenuOpen}
+                className="flex h-full min-w-28 items-center justify-between gap-5 bg-[#C1FA5A] px-3 text-xs font-medium text-[#1B1C1E] transition hover:bg-[#A9E642] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white sm:min-w-32 sm:px-3"
+              >
+                <span>{selectedProject.category === 'Websites' ? 'Website' : selectedProject.category}</span>
+                <svg aria-hidden="true" viewBox="0 0 16 16" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m3 6 5 5 5-5" /></svg>
+              </button>
+              {projectCategoryMenuOpen && <div role="menu" className="absolute left-0 top-full z-50 min-w-full border border-white/10 bg-[#1B1C1E] py-1 shadow-xl">
+                {detailCategories.map((category) => {
+                  const firstProject = projectCatalog.find((project) => project.category === category)
+                  if (!firstProject) return null
+                  return <button key={category} type="button" role="menuitem" onClick={() => { setProjectCategoryMenuOpen(false); openProject(firstProject.id) }} className="block w-full whitespace-nowrap px-4 py-2 text-left text-xs font-semibold text-white transition hover:bg-white/10 hover:text-[#C1FA5A]">{category === 'Websites' ? 'Website' : category}</button>
+                })}
+              </div>}
+            </div>
+            <button
+              type="button"
+              onClick={() => projectNavRef.current?.scrollBy({ left: -320, behavior: 'smooth' })}
+              aria-label="Scroll project navigation left"
+              className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-full text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1FA5A] md:flex"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+            </button>
+            <div ref={projectNavRef} className="min-w-0 flex-1 overflow-x-auto">
               <div className="flex w-max items-center gap-1.5 sm:gap-2">
                 {projectChoices.map((project, index) => (
                   <button
@@ -1347,13 +1414,21 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
                     onClick={() => openProject(project.id)}
                     aria-label={`Open ${project.title}`}
                     title={project.title}
-                    className={`flex h-10 min-w-fit shrink-0 items-center justify-center whitespace-nowrap rounded-lg px-3 text-[11px] font-bold transition sm:h-12 sm:rounded-xl sm:px-4 sm:text-sm ${project.id === selectedProject.id ? 'bg-[#C1FA5A] text-[#1B1C1E]' : 'bg-transparent text-white hover:bg-white/10'}`}
+                    className={`flex h-9 min-w-fit shrink-0 items-center justify-center whitespace-nowrap rounded-lg px-3 text-[11px] font-bold transition sm:h-10 sm:rounded-xl sm:px-4 sm:text-sm ${project.id === selectedProject.id ? 'bg-[#C1FA5A] text-[#1B1C1E]' : 'bg-transparent text-white hover:bg-white/10'}`}
                   >
-                    {selectedProject.category === 'Websites' ? websiteLabels[index] ?? `W${index + 1}` : `W${index + 1}`}
+                    {project.title}
                   </button>
                 ))}
               </div>
             </div>
+            <button
+              type="button"
+              onClick={() => projectNavRef.current?.scrollBy({ left: 320, behavior: 'smooth' })}
+              aria-label="Scroll project navigation right"
+              className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-full text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1FA5A] md:flex"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
           </div>
         </div>
 
@@ -1376,6 +1451,81 @@ export default function ProjectsPage(_props: ProjectsPageProps) {
               </div>
             )}
           </DetailSection>
+          {selectedProject.id === 8 && (
+            <>
+              <DetailSection title="Project Role and Goals" color={selectedProject.accent}>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div><p><strong>Role:</strong> Senior UI/UX Designer</p><p className="mt-2"><strong>Project type:</strong> B2B Enterprise Web Application</p><p className="mt-2"><strong>Platform:</strong> Web Application</p><p className="mt-2"><strong>Responsibilities:</strong> Product Strategy, Information Architecture, User Flows, Wireframing, UI Design, Dashboard Design</p></div>
+                  <div><h3 className="mb-2 font-bold text-[#1A1A2E]">Project Goals</h3><ul className="list-disc space-y-1 pl-5"><li>Centralize business operations and connect workflows from lead generation to project closure.</li><li>Improve collaboration, accountability, task assignment, status tracking, and follow-ups.</li><li>Provide role-based dashboards for employees, managers, and executives.</li><li>Improve operational visibility and support data-informed decisions.</li></ul></div>
+                </div>
+                <p className="mt-5"><strong>Design approach:</strong> Discover → Define → Structure → Design → Validate. I mapped end-to-end business workflows, departmental responsibilities, information movement, user journeys, and permissions before shaping the interface.</p>
+              </DetailSection>
+              <DetailSection title="Information Architecture" color={selectedProject.accent}>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {[
+                    ["CRM", "Leads, customer records, assignments, requirements, and follow-ups."],
+                    ["Digital & Ground Marketing", "Lead sources, campaigns, exhibitions, referrals, and customer inquiries."],
+                    ["Tender Management", "Opportunities, eligibility, proposals, submissions, deadlines, and outcomes."],
+                    ["People Management", "Employee profiles, attendance, leave, documents, holidays, and announcements."],
+                    ["Store Management", "Inventory, stock movements, material availability, and requisitions."],
+                    ["Production Management", "Production planning, work orders, progress, and completion."],
+                    ["Export Management", "Export documentation, dispatch preparation, and shipment tracking."],
+                    ["Service Management", "On-site support, service requests, and service history."],
+                    ["Account Management", "Advance payments, invoices, receivables, follow-ups, and reconciliation."],
+                    ["Business Management", "Executive dashboards, KPIs, departmental performance, financial overviews, and escalations."],
+                    ["Task Management", "Cross-department tickets, assignment, progress, review, and closure."],
+                  ].map(([module, description]) => <article key={module} className="rounded-xl border border-[#E8E8E8] bg-white p-4"><h3 className="font-bold text-[#1A1A2E]">{module}</h3><p className="mt-1 text-sm">{description}</p></article>)}
+                </div>
+              </DetailSection>
+              <DetailSection title="End-to-End Business Workflow" color={selectedProject.accent}>
+                <p className="font-semibold leading-7 text-[#1A1A2E]">Lead Generation → CRM Assignment → Sales & Technical Coordination → Purchase Order → Production & Store Coordination → Export & Delivery → Technical Support → Final Payment → Project Closure</p>
+                <p className="mt-3">Awarded tenders enter the same operational workflow through their contract or purchase order. Account Management tracks financial transactions throughout the project, while Task Management supports collaboration and issue resolution across departments.</p>
+              </DetailSection>
+              <DetailSection title="Key UX Solutions" color={selectedProject.accent}>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {[
+                    ["Unified Departmental Workspace", "Dedicated modules, shared navigation, and role-based access help employees focus on relevant information and actions."],
+                    ["Role-Based Dashboards", "Relevant KPIs, pending tasks, alerts, workflow statuses, and performance metrics are surfaced for each responsibility."],
+                    ["Cross-Department Task Management", "A shared ticket workflow lets employees raise requests, department heads assign work, and requesters review completion."],
+                    ["Connected Order Lifecycle", "Work across CRM, Store, Production, Export, Service, and Account Management is mapped for clearer status and coordination."],
+                    ["Tender Lifecycle Tracking", "Opportunities, eligibility reviews, proposal preparation, approvals, deadlines, and outcomes form a traceable workflow."],
+                    ["Operational and Executive Visibility", "Account Management supports day-to-day payments while Business Management provides performance and strategic oversight."],
+                  ].map(([heading, description]) => <article key={heading} className="rounded-xl border border-[#E8E8E8] bg-white p-4"><h3 className="font-bold text-[#1A1A2E]">{heading}</h3><p className="mt-1 text-sm">{description}</p></article>)}
+                </div>
+              </DetailSection>
+              <DetailSection title="Design Principles and Expected Impact" color={selectedProject.accent}>
+                <p><strong>Principles:</strong> Clarity, Consistency, Hierarchy, Efficiency, Scalability, and Accountability.</p>
+                <p className="mt-3">The design is intended to improve coordination, visibility into leads, tenders, orders, and projects, payment tracking, ownership of internal requests, access to operational insights, and readiness for future workflow automation. These outcomes require validation through implementation and user feedback.</p>
+              </DetailSection>
+              <DetailSection title="Key Takeaway" color={selectedProject.accent}>
+                <p>Rather than designing isolated screens, SANDS Connect considers how the organization operates as a whole. Connecting departmental responsibilities, business workflows, and role-based information creates a structured foundation for more efficient collaboration and operational visibility.</p>
+              </DetailSection>
+            </>
+          )}
+          {selectedProject.id === 9 && (
+            <>
+              <DetailSection title="Project Goals and UX Audit" color={selectedProject.accent}>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div><h3 className="mb-2 font-bold text-[#1A1A2E]">Project Goals</h3><ul className="list-disc space-y-1 pl-5"><li>Improve usability using client feedback and user observations.</li><li>Simplify navigation and essential monitoring workflows.</li><li>Clarify machine status, sensor readings, and analytics hierarchy.</li><li>Improve chart readability and interactive exploration of server-provided data.</li><li>Preserve existing functionality while improving the user experience.</li></ul></div>
+                  <div><h3 className="mb-2 font-bold text-[#1A1A2E]">Research and Evaluation</h3><ul className="list-disc space-y-1 pl-5"><li>Audited existing screens, navigation, and interaction patterns.</li><li>Reviewed client feedback to identify areas of difficulty.</li><li>Examined how users completed key monitoring tasks.</li><li>Mapped flows to find unnecessary steps and confusing transitions.</li><li>Evaluated the priority of sensor data, machine status, and analytics.</li></ul></div>
+                </div>
+              </DetailSection>
+              <DetailSection title="Information Architecture and User Flow" color={selectedProject.accent}>
+                <p className="rounded-xl bg-[#F9F8F6] p-4 text-center font-semibold leading-7 text-[#1A1A2E]">Login → Dashboard Overview → Select Machine or Sensor → Review Sensor Data → Explore Analytics → Identify Issues → Investigate Further</p>
+                <p className="mt-4">This journey takes users from an overview of machine conditions to detailed sensor information with fewer navigation barriers.</p>
+              </DetailSection>
+              <DetailSection title="Visual Hierarchy and Data Visualization" color={selectedProject.accent}>
+                <ul className="grid list-disc gap-x-8 gap-y-2 pl-5 sm:grid-cols-2"><li>Prioritize essential machine and sensor information.</li><li>Organize dashboard content into clearly defined sections.</li><li>Improve chart, metric, and data-label readability.</li><li>Use consistent spacing, typography, and component patterns.</li><li>Make important statuses and trends easier to distinguish.</li><li>Connect summary metrics to detailed analytical views.</li></ul>
+              </DetailSection>
+              <DetailSection title="Interactive Design and Process" color={selectedProject.accent}>
+                <p>Navigation between dashboard sections, selection of machines and sensors, analytics controls, interaction patterns, and visual feedback were refined to reduce friction in complex monitoring workflows.</p>
+                <div className="mt-4 flex flex-wrap items-center gap-2 rounded-xl bg-[#F9F8F6] p-4 text-xs font-bold text-[#343447]">{["Audit", "Test", "Analyze", "Restructure", "Redesign", "Prototype"].map((step, index) => <span key={step} className="flex items-center gap-2"><span className="rounded-lg bg-white px-3 py-2 shadow-sm">{step}</span>{index < 5 && <span className="text-[#9A96A8]">→</span>}</span>)}</div>
+              </DetailSection>
+              <DetailSection title="Key Takeaway" color={selectedProject.accent}>
+                <p>Redesigning Argus began with understanding the existing product. Combining client feedback, usability evaluation, user-flow analysis, information architecture, and interactive design improved the experience while keeping its core purpose in view: making industrial monitoring data more accessible and actionable.</p>
+              </DetailSection>
+            </>
+          )}
           <DetailSection title="Problem and Solution" color={selectedProject.accent}>
             <div className="grid gap-6 md:grid-cols-2">
               <div><h3 className="mb-2 font-bold text-[#1A1A2E]">The Problem</h3><p>{selectedProject.challenge}</p></div>

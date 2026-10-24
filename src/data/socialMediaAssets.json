@@ -433,5 +433,96 @@
         "name":  "DCU-01.jpg",
         "kind":  "jpg",
         "timestamp":  9223372036854775807
+    },
+    {
+        "name":  "Ayudha pooja.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/Ayudha%20pooja.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "Dussehra.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/Dussehra.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "Engineers.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/Engineers.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "gandhi.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/gandhi.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "Ganesh chaturthi.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/Ganesh%20chaturthi.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "Holi.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/Holi.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "International Yoga day copy.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/International%20Yoga%20day%20copy.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "May labour day.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/May%20labour%20day.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "Pongal v2.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/Pongal%20v2.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "Tamil New Year-02-02.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/Tamil%20New%20Year-02-02.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "World health day copy.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/World%20health%20day%20copy.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "World Youth skill copy.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/World%20Youth%20skill%20copy.jpg",
+        "category":  "Special Day Poster"
+    },
+    {
+        "name":  "youth day copy.jpg",
+        "kind":  "jpg",
+        "timestamp":  9223372036854775807,
+        "path":  "/assets/social-media/specail%20day%20post/youth%20day%20copy.jpg",
+        "category":  "Special Day Poster"
     }
 ]
